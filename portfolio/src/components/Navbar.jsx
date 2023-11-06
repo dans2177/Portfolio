@@ -12,11 +12,11 @@ const Navbar = () => {
     }
   };
 
-  const navItemClass = "text-amber-200 hover:text-amber-100 cursor-pointer px-3 py-2 rounded-md text-sm font-medium";
+  const navItemClass = "text-amber-100  hover:text-orange-600 cursor-pointer px-3 py-2 rounded-md text-sm font-medium";
 
   return (
-    <nav className="absolute top-0 left-0 right-0 bg-orange-900 shadow z-10">
-      <ul className="flex space-x-4 justify-center p-3">
+    <nav className="absolute top-0 left-0 right-0 bg-orange-900  z-10">
+      <ul className="flex space-x-4 justify-center p-3 font-comfortaa">
         {/* Use li tags with onClick to handle scrolling */}
         <li className={navItemClass} onClick={() => scrollToSection('header')}>Header</li>
         <li className={navItemClass} onClick={() => scrollToSection('about')}>About</li>

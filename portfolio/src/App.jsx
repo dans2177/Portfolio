@@ -5,11 +5,14 @@ import Projects from "./components/Projects.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
   return (
-    <div>
+<div>
       <Navbar />
+          <Sidebar/> 
+
       <div id="header">
         <Header />
       </div>

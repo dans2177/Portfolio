@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="bg-orange-900 text-amber-100 text-center p-4 mt-12">
+    <header className="bg-orange-900 text-amber-100 text-center p-4 mt-12 pb-20">
       <div className="h-auto border-solid border-4 rounded">
         <div className="flex-col justify-start p-4 m-4">
         <h1 className="animate-slide-top text-2xl font-bold text-left font-agbalumo md:text-3xl lg:text-4xl">Hello! My name is</h1> 
