@@ -1,10 +1,7 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    // Paths to your files should go here.
-    // Use glob patterns to include all relevant files, for example:
-    './src/**/*.{html,js,jsx,ts,tsx}', // Adjust this according to your project's folder structure
-    // Add any other paths that contain Tailwind class names.
+    './src/**/*.{html,js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
