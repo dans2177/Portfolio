@@ -23,10 +23,15 @@ module.exports = {
           '0%': { transform: 'translateY(-50%)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        blink: {
+          '0%, 100%': { opacity: '0' },
+          '50%': { opacity: '1' },
+        },
       },
       animation: {
         'slide-left': 'slideLeft 2s ease-in-out forwards',
-        'slide-top': 'slideTop 2s ease-in-out forwards'
+        'slide-top': 'slideTop 2s ease-in-out forwards',
+        'blink': 'blink 1s step-end infinite',
       },
     },
   },

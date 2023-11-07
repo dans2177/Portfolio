@@ -9,7 +9,7 @@ import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
   return (
-<div>
+<div className="bg-orange-900 text-amber-100 ">
       <Navbar />
           <Sidebar/> 
 
