@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 function Sidebar() {
   return (
-    <div className="fixed z-10 bottom-2 left-3 h-fit w-16  bg-orange-600  rounded-3xl text-white flex flex-col items-center justify-center m-4 p-6 shadow-lg">
+    <div className="fixed z-10 bottom-1 left-1 h-fit w-16  bg-orange-600  rounded-3xl text-white flex flex-col items-center justify-center m-4 p-6 shadow-lg">
       {/* Social media icons */}
       <a href="https://www.github.com/dans2177" className="text-gray-200 text-2xl mb-4" target="_blank" rel="noopener noreferrer">
         <FaGithub />

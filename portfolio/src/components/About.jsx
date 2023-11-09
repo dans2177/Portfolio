@@ -25,38 +25,46 @@ const sections = [
 
 function About() {
   return (
-<div className="max-w-2xl mx-auto sm:justify-center sm:align-middle">
-  <section className="p-4 m-4">
-    <h2 className="text-6xl font-bold font-prata text-amber-400 text-center sm:text-right">
-      About Me
-    </h2>
+    <div className="max-w-2xl mt-40 mx-auto sm:justify-center sm:align-middle bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg shadow-xl">
+      <section className="m-4">
+        <h2 className="text-6xl pb-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600 text-center sm:text-left">
+          About Me
+        </h2>
 
-    <div className="flex flex-col sm:flex-row items-center mt-4">
-      {/* Image on the right for large screens and on top for small screens */}
-      <div className="flex-shrink-0 sm:w-1/2 sm:pl-4">
-        <img
-          src="/Handsome.jpeg"
-          alt="About Me"
-          className="rounded-full w-64 h-64 mb-4 sm:mb-0 mx-auto sm:mx-0 object-cover"
-        />
-      </div>
-      {/* Text on the left for large screens and below image for small screens */}
-      <div className="sm:w-1/2 sm:pr-4">
-        <p className="font-prata text-gray-100 text-center leading-10 sm:text-right">
-          Business Management Major. <br/> 
-          Self-taught Developer.<br/> 3D Printing
-          Expert. <br/>Innovative Problem Solver. <br/>Driven by Dedication, and
-          Dedicated to Servant Leadership.
-        </p>
-      </div>
-    </div>
-  </section>
+        <div className="flex flex-col-reverse sm:flex-row items-center mt-4">
+          {/* Text on the left for large screens and below image for small screens */}
+          <div className="sm:w-1/2 sm:pr-8">
+            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-lg">
+              <ul className="list-disc space-y-4 font-semibold text-gray-100 text-lg text-center sm:text-left pl-5">
+                <li>Business Management Major</li>
+                <li>Self-taught Developer</li>
+                <li>3D Printing Expert</li>
+                <li>Innovative Problem Solver</li>
+                <li>
+                  Driven by Dedication, and Dedicated to Servant Leadership
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Image on the right for large screens and on top for small screens */}
+          <div className="flex-shrink-0 sm:w-1/2 sm:pl-8">
+            <img
+              src="/Handsome.jpeg"
+              alt="About Me"
+              className="rounded-full w-64 h-64 mb-4 sm:mb-0 mx-auto sm:mx-0 object-cover shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
 
-      <ol className="relative border-l border-grey-400 mt-6">
+      <ol className="relative border-l-2 border-grey-400 mt-20">
+        <h2 className=" text-4xl p-6 font-prata text-amber-400">
+          Timeline into Tech
+        </h2>
         {sections.map((section, index) => (
           <li
             key={index}
-            className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-40 p-4 rounded-xl"
+            className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-40 p-4 m-4 rounded-xl"
           >
             <div className="absolute left-0 -ml-3 mt-2 w-6 h-6 bg-amber-400 rounded-full border-2 border-black"></div>
 

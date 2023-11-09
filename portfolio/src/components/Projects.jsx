@@ -1,26 +1,66 @@
-import React from 'react';
+import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 function Projects() {
-  // Dummy projects data
   const projects = [
-    { title: 'Project One', description: 'This is a description for project one.' },
-    { title: 'Project Two', description: 'This is a description for project two.' },
+    {
+      title: "Family Cookbook",
+      description:
+        "A private digital repository for our family to share and cherish generations of recipes. A simple family phrase unlocks the ability to add and edit, keeping our culinary heritage at our fingertips.",
+      imageUrl: "./Shemon_Cookbook.png",
+      link: "https://github.com/your-github/family-cookbook",
+      linkType: "github",
+    },
+    {
+      title: "Filament Tracker",
+      description:
+        "Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
+      imageUrl: "/Filament_Tracker.png",
+      link: "https://github.com/your-github/filament-tracker",
+      linkType: "github",
+    },
     // ...more projects
   ];
 
   return (
-    <section className="p-4">
-      <h2 className="text-xl font-bold">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="max-w-2xl mx-auto p-4 pt-40 sm:justify-center sm:align-middle">
+      <h2 className="text-6xl pb-8 font-prata text-amber-400 text-center sm:text-left">
+        Projects
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
         {projects.map((project, index) => (
-          <div key={index} className="p-4 shadow rounded bg-white">
-            <h3 className="font-semibold">{project.title}</h3>
-            <p>{project.description}</p>
+          <div
+            key={index}
+            className="group flex flex-col shadow rounded-lg bg-black bg-opacity-40 transform hover:scale-105 transition duration-300"
+          >
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex flex-col h-full" // Ensure the anchor has a full height
+            >
+              <img
+                src={project.imageUrl}
+                alt={`Project ${project.title}`}
+                className="object-cover w-full h-48 md:h-full rounded-t-lg"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold font-comfortaa text-amber-400 mt-4">
+                  {project.title}
+                </h3>
+                <p className="text-sm font-comfortaa text-gray-200 flex-grow">
+                  {project.description}
+                </p>
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                {/* Ensure the icon is only visible on hover */}
+                <FaGithub className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </a>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
-
 export default Projects;

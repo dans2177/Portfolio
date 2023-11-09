@@ -1,17 +1,38 @@
-import React from 'react';
+import React from "react";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
-function Contact() {
+const Contact = () => {
   return (
-    <section className="p-4">
-      <h2 className="text-xl font-bold">Contact</h2>
-      <form className="flex flex-col space-y-2">
-        <input className="border p-2" type="text" placeholder="Your Name" />
-        <input className="border p-2" type="email" placeholder="Your Email" />
-        <textarea className="border p-2" placeholder="Your Message"></textarea>
-        <button className="bg-blue-500 text-white p-2 rounded">Send Message</button>
-      </form>
-    </section>
+    <div className="max-w-2xl mx-auto p-4 pb-20 sm:justify-center sm:align-middle">
+      <h2 className="text-6xl pb-8 font-prata text-amber-400 text-left">
+        Let's Stay Connected
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
+        <div className="group flex flex-col justify-center items-center shadow rounded-lg bg-black bg-opacity-40 transform hover:scale-105 transition duration-300">
+          <div className="relative flex flex-col h-full ">
+            <div className="p-4">
+              <FaEnvelope className="text-5xl font-semibold font-comfortaa text-gray-300  mb-4 m-auto" />
+              <a
+                href="mailto:danielshemon@outlook.com"
+                className="text-gray-300  text-lg hover:underline"
+              >
+                danielshemon@outlook.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="group flex flex-col justify-center items-center shadow rounded-lg bg-black bg-opacity-40 transform hover:scale-105 transition duration-300">
+          <div className="relative flex flex-col h-full">
+            <div className="p-4">
+              <FaPhone className="text-5xl font-semibold font-comfortaa text-gray-300 mb-4 m-auto" />
+              <span className="text-gray-300  text-lg">(605) 215-4285</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Contact;
