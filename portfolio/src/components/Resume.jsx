@@ -117,7 +117,7 @@ function Resume() {
 
   return (
     <>
-      <div className="container mt-40 mx-auto p-4 max-w-6xl ">
+      <div className="container mt-20 mx-auto p-4 max-w-6xl ">
         <h2 className="text-6xl pl-6 font-prata text-amber-400 text-center sm:text-left">
           Resume
         </h2>

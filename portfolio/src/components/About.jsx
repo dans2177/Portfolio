@@ -1,29 +1,33 @@
-import React from "react";
+import { useState } from "react";
+import { MdExpandMore, MdExpandLess } from "react-icons/md";
 
 // Define the array of sections at the top of the file
 const sections = [
   {
     title: "The Spark in 7th Grade",
     description:
-      "Ever since I assembled my first 3D printer from a kit of hundreds of pieces back in 7th grade, technology has been more than just a passion—it's been my calling. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something far greater.",
+      "I assembled my first 3D printer from a kit of hundreds of pieces back in 7th grade, technology has been more than just a passion—it's been my calling. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something far greater.",
     imgSrc: "/Chapter_1.png",
   },
   {
     title: "The High School Chapter",
     description:
-      "In high school, I mastered 3D printing, helping set up our school's lab and planning to develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies. This shift turned a global crisis into a personal opportunity to contribute meaningfully.",
+      "In high school, I mastered 3D printing, helping set up our school's lab and planning to develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
     imgSrc: "/Chapter_2.png",
   },
   {
     date: "",
     title: "The College Years",
     description:
-      "As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. My most notable project? A sophisticated filament tracker for 3D printers.",
+      "As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. ",
     imgSrc: "/Chapter_3.png",
   },
 ];
 
 function About() {
+  const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
+  const toggleTimeline = () => setIsTimelineExpanded(!isTimelineExpanded);
+
   return (
     <div className="max-w-2xl mt-40 mx-auto sm:justify-center sm:align-middle bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg shadow-xl">
       <section className="m-4">
@@ -36,8 +40,8 @@ function About() {
           <div className="sm:w-1/2 sm:pr-8">
             <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-lg">
               <ul className="list-disc space-y-4 font-semibold text-gray-100 text-lg text-center sm:text-left pl-5">
-                <li>Business Management Major</li>
                 <li>Self-taught Developer</li>
+                <li>Business Management Major</li>
                 <li>3D Printing Expert</li>
                 <li>Innovative Problem Solver</li>
                 <li>
@@ -57,34 +61,49 @@ function About() {
         </div>
       </section>
 
-      <ol className="relative border-l-2 border-grey-400 mt-20">
-        <h2 className=" text-4xl p-6 font-prata text-amber-400">
-          Timeline into Tech
-        </h2>
-        {sections.map((section, index) => (
-          <li
-            key={index}
-            className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-40 p-4 m-4 rounded-xl"
+      <div className="px-10">
+        <div className="relative border-l-2 border-grey-400 mt-20">
+          <h2
+            onClick={toggleTimeline}
+            className="text-4xl p-6 font-prata text-amber-400 cursor-pointer"
           >
-            <div className="absolute left-0 -ml-3 mt-2 w-6 h-6 bg-amber-400 rounded-full border-2 border-black"></div>
+            Timeline into Tech
+            {/* Icon button to toggle the expand/collapse of the timeline */}
+            <button className="ml-4 text-amber-400">
+              {isTimelineExpanded ? <MdExpandLess /> : <MdExpandMore />}
+            </button>
+          </h2>
 
-            <img
-              src={section.imgSrc}
-              alt={section.title}
-              className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last"
-            />
+          {/* Conditional rendering based on isTimelineExpanded */}
+          {isTimelineExpanded && (
+            <ol>
+              {sections.map((section, index) => (
+                <li
+                  key={index}
+                  className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-40 p-4 m-4 rounded-xl"
+                >
+                  <div className="absolute left-0 -ml-3 mt-2 w-6 h-6 bg-amber-400 rounded-full border-2 border-black"></div>
 
-            <div className="flex-grow max-w-3xl md:order-first">
-              <h3 className="text-lg font-semibold font-prata text-amber-400">
-                {section.title}
-              </h3>
-              <p className="text-base font-prata text-gray-200">
-                {section.description}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ol>
+                  <img
+                    src={section.imgSrc}
+                    alt={section.title}
+                    className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last"
+                  />
+
+                  <div className="flex-grow max-w-3xl md:order-first">
+                    <h3 className="text-lg pb-4 font-semibold font-prata text-amber-400">
+                      {section.title}
+                    </h3>
+                    <p className="text-base font-prata text-gray-200">
+                      {section.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

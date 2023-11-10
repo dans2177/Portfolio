@@ -23,7 +23,7 @@ function Projects() {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto p-4 pt-40 sm:justify-center sm:align-middle">
+    <div className="max-w-2xl mx-auto p-4 pt-20 sm:justify-center sm:align-middle">
       <h2 className="text-6xl pb-8 font-prata text-amber-400 text-center sm:text-left">
         Projects
       </h2>
@@ -52,7 +52,7 @@ function Projects() {
                   {project.description}
                 </p>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                 {/* Ensure the icon is only visible on hover */}
                 <FaGithub className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
