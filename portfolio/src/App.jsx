@@ -18,7 +18,7 @@ function App() {
 
   return (
       <DarkModeProvider>
-      <div   className="bg-gray-200 dark:bg-gray-800 w-screen safe-top safe-left safe-right safe-bottom">
+      <div className="bg-gray-200 dark:bg-gray-800">
           <Navbar />
           <ScrollToTopButton />
 

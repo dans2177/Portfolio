@@ -1,5 +1,4 @@
 import React from "react";
-import { FaDownload } from "react-icons/fa"; // Importing the download icon from React Icons
 
 function Resume() {
   const education = [
@@ -36,11 +35,6 @@ function Resume() {
 
   const volunteer = [
     {
-      role: "3D Printer Operator for COVID-19 Relief",
-      details:
-        "Utilized 3D printing skills to produce medical supplies to be donated, contributing to pandemic relief efforts.",
-    },
-    {
       role: "Audio Visual Technician ",
       duration: "Jul 2017-22",
       details:
@@ -54,16 +48,32 @@ function Resume() {
     {
       role: "The Banquet",
       details:
-        "Serving and preparing meals for homeless and low-income families, as well as be someone that will listen to them.",
+        "Serving and preparing meals for homeless and low-income families, being someone that will listen to them.",
     },
     {
       role: "Operation Christmas Child",
       details:
         "Participated in a trip to a distribution center, where our group sorted and packed gifts for Operation Christmas Child.",
     },
+    {
+      role: "3D Printer Operator for COVID-19 Relief",
+      details:
+        "Utilized 3D printing skills to produce medical supplies to be donated, contributing to pandemic relief efforts.",
+    },
   ];
 
   const professionalExperience = [
+    {
+      role: "AI Workshop Instructor",
+      company: "Independent",
+      period: "September 2023",
+      tasks: [
+        "Developed and delivered a comprehensive curriculum to over 100 business professionals, covering the basics and applications of ChatGPT and AI in business.",
+        "Provided practical, hands-on training sessions to enhance participants' understanding and skills in using ChatGPT and AI tools.",
+        "Ensured each participant's understanding through one-on-one mentoring upon request, tailoring the guidance to meet diverse learning needs.",
+      ],
+      // Add more professional experiences as needed
+    },
     {
       role: "Business Operations Intern",
       company: "Highest Health Chiropractic",
@@ -73,17 +83,6 @@ function Resume() {
         "Going Paperless: Created a plan to switch to digital forms for all office paperwork and finished on schedule.",
         "Data Management: Responsible for data entry tasks, ensuring high levels of accuracy across all systems.",
         "Customer Interaction: Actively engaged with customers to provide professional service and address any concerns.",
-      ],
-    },
-    {
-      role: "Team Member",
-      company: "GreatLIFE Golf and Fitness",
-      period: "December 2019 - July 2021",
-      tasks: [
-        "Served as the primary point of contact for members and guests, ensuring a smooth check-in and check-out process.",
-        "Handled membership sign-ups and liaised with insurance companies to verify coverage for new members.",
-        "Effectively resolved customer complaints to maintain a positive environment.",
-        "Ensured the facility was clean and compliant with CDC standards.",
       ],
     },
     {
@@ -98,22 +97,17 @@ function Resume() {
       ],
     },
     {
-      role: "AI Workshop Instructor",
-      company: "Independent",
-      period: "September 2023",
+      role: "Team Member",
+      company: "GreatLIFE Golf and Fitness",
+      period: "December 2019 - July 2021",
       tasks: [
-        "Developed and delivered a comprehensive curriculum to over 100 business professionals, covering the basics and applications of ChatGPT and AI in business.",
-        "Provided practical, hands-on training sessions to enhance participants' understanding and skills in using ChatGPT and AI tools.",
-        "Ensured each participant's understanding through one-on-one mentoring upon request, tailoring the guidance to meet diverse learning needs.",
+        "Served as the primary point of contact for members and guests, ensuring a smooth check-in and check-out process.",
+        "Handled membership sign-ups and liaised with insurance companies to verify coverage for new members.",
+        "Effectively resolved customer complaints to maintain a positive environment.",
+        "Ensured the facility was clean and compliant with CDC standards.",
       ],
-      // Add more professional experiences as needed
     },
   ];
-
-  // Add your download resume logic here
-  const handleDownloadResume = () => {
-    console.log("Download resume functionality to be implemented");
-  };
 
   return (
     <>
@@ -125,15 +119,15 @@ function Resume() {
         <div className="grid grid-cols-1 bg-white dark:bg-black bg-opacity-40 p-4 m-4 border-2 border-black rounded-lg md:grid-cols-3 gap-4 text-white">
           {/* Work Experience Section - takes up two columns on medium screens */}
           <div className="md:col-span-2 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left p-4 m-4 text-amber-700 dark:text-amber-500 mb-5">
+            <h2 className="text-xl font-comfortaa text-left p-4 m-4 text-amber-700 dark:text-amber-500 hover:text-amber-600  dark:hover:text-amber-700 mb-5">
               Work Experience
             </h2>
             {professionalExperience.map((exp, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-amber-600  dark:hover:bg-amber-700 transform transition duration-500 "
+                className="m-6 p-4 rounded-lg bg-gray-200 dark:bg-gray-800 hover:shadow-lg transform transition duration-500 "
               >
-                <h3 className="font-bold text-gray-800 dark:text-white hover:text-white text-lg">
+                <h3 className="font-bold text-gray-800 dark:text-white  text-lg">
                   {exp.role} - {exp.company}
                 </h3>
                 <p className="italic text-gray-700 dark:text-gray-400">
@@ -155,15 +149,15 @@ function Resume() {
 
           {/* Volunteer Section - takes up one column on medium screens */}
           <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left text-purple-800 dark:text-purple-400 m-4 p-4 ">
+            <h2 className="text-xl font-comfortaa text-left text-purple-800 dark:text-purple-400 dark:hover:text-purple-600 hover:text-purple-700 m-4 p-4 ">
               Volunteer Work
             </h2>
             {volunteer.map((vol, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 transform transition duration-500  dark:hover:bg-purple-800 hover:bg-purple-800"
+                className="m-6 p-4  rounded-lg bg-gray-200 hover:shadow-lg dark:bg-gray-800 transform transition duration-500  "
               >
-                <h3 className="font-bold text-gray-900 hover:text-white dark:text-white text-lg mb-2">
+                <h3 className="font-bold text-gray-900  dark:text-white text-lg mb-2">
                   {vol.role}
                 </h3>
                 <p className="text-gray-900 dark:text-gray-200">
@@ -175,15 +169,15 @@ function Resume() {
 
           {/* Certifications Section - takes up one column */}
           <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-blue-600 dark:text-blue-400">
+            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-900">
               Certifications
             </h2>
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-blue-900 dark:hover:bg-blue-900 transform transition duration-500 "
+                className="m-6 p-4 hover:shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800  transform transition duration-500 "
               >
-                <h3 className="font-bold text-gray-900 hover:text-white dark:text-white text-lg mb-2">
+                <h3 className="font-bold text-gray-900  dark:text-white text-lg mb-2">
                   {cert.title}
                 </h3>
                 <p className="text-gray-900 dark:text-gray-300">
@@ -195,15 +189,15 @@ function Resume() {
 
           {/* Education Section - takes up two columns on medium screens */}
           <div className="md:col-span-2">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-green-600 dark:text-green-400">
+            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-600">
               Education
             </h2>
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200  dark:bg-gray-800 hover:bg-green-900 transform transition duration-500 "
+                className="m-6 p-4 hover:shadow-lg rounded-lg bg-gray-200  dark:bg-gray-800 transform transition duration-500 "
               >
-                <h3 className="font-bold text-gray-800 hover:text-white dark:text-white">
+                <h3 className="font-bold text-gray-800  dark:text-white">
                   {edu.institution}
                 </h3>
                 <p className="italic text-gray-900 dark:text-gray-400">
@@ -226,13 +220,7 @@ function Resume() {
 
         {/* Download Resume Button - centered below the grid */}
         <div className="flex justify-center ">
-          <button
-            onClick={handleDownloadResume}
-            className="flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md bg-amber-400 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400"
-          >
-            <FaDownload className="mr-2" />
-            Download Resume
-          </button>
+          <p className="text-black dark:text-white"> Refrences available upon request. </p>
         </div>
       </div>
     </>

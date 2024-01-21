@@ -30,7 +30,7 @@ function About() {
 
   return (
     <div className="container mt-10 md:mt-20  mx-auto p-4 max-w-6xl ">
-      <h2 className="text-4xl md:text-6xl  font-prata pb-6 font-bold text-transparent bg-clip-text bg-gray-900 dark:bg-gray-200 text-center  sm:text-left">
+      <h2 className="text-4xl md:pl-4 md:text-6xl  font-prata pb-6 f text-transparent bg-clip-text bg-gray-900 dark:bg-gray-200 text-center  sm:text-left">
         About Me
       </h2>
       <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
@@ -76,10 +76,10 @@ function About() {
         <div className="md:mt-10">
           <h2
             onClick={toggleTimeline}
-            className="text-2xl md:text-4xl font-prata text-gray-900 dark:text-gray-100 cursor-pointer"
+            className="text-2xl md:text-4xl font-prata text-gray-900 hover:text-orange-500 dark:hover:text-orange-500 dark:text-gray-100 cursor-pointer"
           >
             {/* Icon button to toggle the expand/collapse of the timeline */}
-            <button className=" text-amber-500">
+            <button className=" ">
               {isTimelineExpanded ? <MdExpandLess /> : <MdExpandMore />}
             </button>
             Timeline into Tech

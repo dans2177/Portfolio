@@ -8,7 +8,7 @@ function Projects() {
       description:
         "A private digital repository for our family to share and cherish generations of recipes. A simple family phrase unlocks the ability to add and edit, keeping our culinary heritage at our fingertips.",
       imageUrl: "./Shemon_Cookbook.png",
-      link: "https://github.com/your-github/family-cookbook",
+      link: "https://github.com/dans2177/Shemon-Cookbook",
       linkType: "github",
     },
     {
@@ -16,15 +16,14 @@ function Projects() {
       description:
         "Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
       imageUrl: "/Filament_Tracker.png",
-      link: "https://github.com/your-github/filament-tracker",
+      link: "https://github.com/dans2177/Box3D-Frontend",
       linkType: "github",
     },
-    // ...more projects
   ];
 
   return (
     <div className="max-w-6xl mx-auto p-4 pt-20 sm:justify-center sm:align-middle">
-      <h2 className="text-4xl md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
+      <h2 className="text-4xl md:pl-4 md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
         Projects
       </h2>
       <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
