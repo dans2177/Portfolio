@@ -67,7 +67,7 @@ function About() {
               <img
                 src="/Handsome.jpeg"
                 alt="About Me"
-                className="rounded-full w-80 h-80 mb-4 sm:mb-0 mx-32 sm:mx-0 object-cover shadow-lg"
+                className="rounded-full w-80 h-80 mb-4 sm:mt-4 md:ml-10 mx-32 sm:mx-0 object-cover shadow-lg"
               />
             </div>
           </div>

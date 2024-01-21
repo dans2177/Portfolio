@@ -116,10 +116,10 @@ function Resume() {
           Resume
         </h2>
         {/* Grid Container */}
-        <div className="grid grid-cols-1 bg-white dark:bg-black bg-opacity-40 p-4 m-4 border-2 border-black rounded-lg md:grid-cols-3 gap-4 text-white">
+        <div className="grid grid-cols-1 bg-white dark:bg-black bg-opacity-40 p-4 m-4 border-2 gap-0.5 border-black rounded-lg md:grid-cols-3 lg:gap-4 text-white">
           {/* Work Experience Section - takes up two columns on medium screens */}
           <div className="md:col-span-2 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left p-4 m-4 text-amber-700 dark:text-amber-500 hover:text-amber-600  dark:hover:text-amber-700 mb-5">
+            <h2 className="text-xl font-comfortaa text-left m-4 text-amber-700 dark:text-amber-500 hover:text-amber-600  dark:hover:text-amber-700 mb-5">
               Work Experience
             </h2>
             {professionalExperience.map((exp, index) => (
@@ -149,7 +149,7 @@ function Resume() {
 
           {/* Volunteer Section - takes up one column on medium screens */}
           <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left text-purple-800 dark:text-purple-400 dark:hover:text-purple-600 hover:text-purple-700 m-4 p-4 ">
+            <h2 className="text-xl font-comfortaa text-left text-purple-800 dark:text-purple-400 dark:hover:text-purple-600 hover:text-purple-700 m-4">
               Volunteer Work
             </h2>
             {volunteer.map((vol, index) => (
@@ -169,7 +169,7 @@ function Resume() {
 
           {/* Certifications Section - takes up one column */}
           <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-900">
+            <h2 className="text-xl font-comfortaa text-left m-4 text-blue-600 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-900">
               Certifications
             </h2>
             {certifications.map((cert, index) => (
@@ -189,7 +189,7 @@ function Resume() {
 
           {/* Education Section - takes up two columns on medium screens */}
           <div className="md:col-span-2">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-600">
+            <h2 className="text-xl font-comfortaa text-left m-4 text-green-600 dark:text-green-400 hover:text-green-900 dark:hover:text-green-600">
               Education
             </h2>
             {education.map((edu, index) => (
@@ -220,7 +220,10 @@ function Resume() {
 
         {/* Download Resume Button - centered below the grid */}
         <div className="flex justify-center ">
-          <p className="text-black dark:text-white"> Refrences available upon request. </p>
+          <p className="text-black dark:text-white">
+            {" "}
+            Refrences available upon request.{" "}
+          </p>
         </div>
       </div>
     </>
