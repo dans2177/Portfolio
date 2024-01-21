@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="text-center mt-6 p-10 pt-10 transform transition duration-500">
+    <header className="text-center mt-6 p-10 pt-10 md:pt-16 transform transition duration-500">
       <div className="overflow-auto h-[50vh] md:h-[85vh] border-solid border-4 justify-between border-orange-500 text-gray-800 dark:text-gray-300 rounded flex flex-col">
         <div className="flex-grow p-4 sm:m-4">
           <h1 className="animate-slide-top text-xl  font-bold text-left font-prata md:text-3xl lg:text-4xl">
