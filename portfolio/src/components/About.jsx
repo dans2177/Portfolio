@@ -48,13 +48,13 @@ function About() {
 
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
-                  Born in New York City, and raised in the Midwest.
+                  Born in New York, and raised in the Midwest.
                   <br />
-                  <br /> I enjoy traveling, working out, and making random
-                  inventions with my 3D Printer.
+                  <br /> I enjoy traveling, being active, and making random
+                  inventions/projects.
                   <br />
                   <br /> In college, a spark for technology was resparked and I
-                  started my journey to learning coding while persuing a
+                  started my journey to learn coding while persuing a
                   business manamgement degree.
                   <br />
                   <br /> This website is to show how far I have come...

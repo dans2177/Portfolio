@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-0 left-0 right-0 bg-gray-200 dark:bg-gray-800 z-10">
-      <ul className="flex space-x-4 justify-center p-3 font-comfortaa">
+      <ul className="flex space-x-2 justify-center p-3 font-comfortaa">
         {/* Use li tags with onClick to handle scrolling */}
         <li className={navItemClass} onClick={() => scrollToSection("about")}>
           About

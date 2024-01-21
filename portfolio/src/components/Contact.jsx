@@ -10,9 +10,9 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl">
         <div className="m-4">
           <p className="text-gray-900 dark:text-gray-200 font-comfortaa text-center text-lg sm:text-left pb-10">
-            I am always looking for new opportunities to learn and grow. If you
-            have a project you would like to discuss, or just want to say hi,
-            please feel free to contact me.
+            I am currently availabe for new opportunities to work and grow in my
+            career. If you have a project you would like to discuss, or just
+            want to say hi, please feel free to contact me.
             <br />
             <br />
             Feel free to reach out to me via my socails on the left!
