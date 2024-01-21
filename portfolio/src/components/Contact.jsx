@@ -25,7 +25,7 @@ const Contact = () => {
                   <FaEnvelope className="text-5xl font-semibold font-comfortaa dark:text-gray-300  mb-4 m-auto" />
                   <a
                     href="mailto:danielshemon@outlook.com"
-                    className="text-gray-900 dark:text-gray-300 font-comfortaa  text-lg hover:underline"
+                    className="text-gray-900 dark:text-gray-300 font-comfortaa  sm:text-lg hover:underline"
                   >
                     danielshemon@outlook.com
                   </a>

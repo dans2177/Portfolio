@@ -61,7 +61,7 @@ function Skills() {
       <h2 className="text-4xl md:text-6xl sm:pl-6 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left ">
         Skills
       </h2>
-      <div className="mt-4  mx-4 sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
+      <div className="mt-4  mx-4 sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-2 rounded-lg dark:shadow-xl">
         <div className="m-4 transform transition duration-500">
           <ul className="list-none flex flex-wrap justify-center">
             {skillSet.map((skillItem, index) => (

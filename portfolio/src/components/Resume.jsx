@@ -117,8 +117,8 @@ function Resume() {
 
   return (
     <>
-      <div className="container mt-10 mx-auto p-4 max-w-6xl ">
-        <h2 className="text-4xl md:text-6xl pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left">
+      <div className="container mt-10 mx-auto sm:p-4 max-w-6xl ">
+        <h2 className="text-4xl md:text-6xl sm:pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left">
           Resume
         </h2>
         {/* Grid Container */}
