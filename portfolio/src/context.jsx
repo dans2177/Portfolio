@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 
 const DarkModeContext = createContext();
 
@@ -15,6 +15,14 @@ export const DarkModeProvider = ({ children }) => {
       document.documentElement.classList.remove("dark");
     }
   };
+useEffect(() => {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    document.documentElement.classList.add("dark");
+  }
+}, []);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>

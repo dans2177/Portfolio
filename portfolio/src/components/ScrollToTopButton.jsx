@@ -28,6 +28,7 @@ const ScrollToTopButton = () => {
     }
   };
 
+
   // Add and remove the window scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
