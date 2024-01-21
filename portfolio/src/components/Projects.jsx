@@ -23,15 +23,15 @@ function Projects() {
   ];
 
   return (
-    <div className="max-w-2xl mx-auto p-4 pt-20 sm:justify-center sm:align-middle">
-      <h2 className="text-6xl pb-8 font-prata text-amber-400 text-center sm:text-left">
+    <div className="max-w-6xl mx-auto p-4 pt-20 sm:justify-center sm:align-middle">
+      <h2 className="text-4xl md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
         Projects
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
+      <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group flex flex-col shadow rounded-lg bg-black bg-opacity-40 transform hover:scale-105 transition duration-300"
+            className="group flex flex-col  rounded-lg bg-white shadow-lg dark:bg-gray-900 transform hover:scale-95 transition duration-300"
           >
             <a
               href={project.link}
@@ -44,14 +44,15 @@ function Projects() {
                 alt={`Project ${project.title}`}
                 className="object-cover w-full h-48 md:h-full rounded-t-lg"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold font-comfortaa text-amber-400 mt-4">
+              <div className="p-4 flex flex-col justify-between h-full">
+                <h3 className="text-lg pb-4 text-bold font-semibold font-comfortaa dark:text-amber-400 mt-4">
                   {project.title}
                 </h3>
-                <p className="text-sm font-comfortaa text-gray-200 flex-grow">
+                <p className="text-md font-comfortaa text-gray-900 dark:text-gray-200 flex-grow">
                   {project.description}
                 </p>
               </div>
+
               <div className="absolute inset-0 bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                 {/* Ensure the icon is only visible on hover */}
                 <FaGithub className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

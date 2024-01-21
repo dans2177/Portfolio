@@ -9,36 +9,39 @@ import Sidebar from "./components/Sidebar.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
+import { DarkModeProvider } from "./context.jsx";
 
 function App() {
   return (
-    <div className="bg-orange-900 text-amber-100 ">
-      <Navbar />
-      <ScrollToTopButton />
+    <DarkModeProvider>
+      <div className="bg-gray-200 dark:bg-gray-800 ">
+        <Navbar />
+        <ScrollToTopButton />
 
-      <Sidebar />
+        <Sidebar />
 
-      <div id="header">
-        <Header />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-      <div id="resume">
-        <Resume />
-      </div>
-      <div id="skills">
-        <Skills />
-      </div>
+        <div id="header">
+          <Header />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <div id="resume">
+          <Resume />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </DarkModeProvider>
   );
 }
 

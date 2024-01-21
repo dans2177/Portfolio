@@ -13,10 +13,10 @@ const Navbar = () => {
   };
 
   const navItemClass =
-    "text-amber-100  hover:text-orange-600 cursor-pointer px-3 py-2 rounded-md text-sm font-medium";
+    "text-gray-900 dark:text-gray-200 dark:hover:text-orange-400 hover:text-orange-600 cursor-pointer px-3 py-2 rounded-md text-sm font-medium";
 
   return (
-    <nav className="absolute top-0 left-0 right-0 bg-orange-900  z-10">
+    <nav className="absolute top-0 left-0 right-0 bg-gray-200 dark:bg-gray-800 z-10">
       <ul className="flex space-x-4 justify-center p-3 font-comfortaa">
         {/* Use li tags with onClick to handle scrolling */}
         <li className={navItemClass} onClick={() => scrollToSection("about")}>

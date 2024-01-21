@@ -1,43 +1,52 @@
-import React from 'react';
+import React from "react";
 // Import the necessary icons from react-icons
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaSquareXTwitter,
+} from "react-icons/fa6";
+// Import the useDarkMode hook
 
 function Sidebar() {
+
   return (
-    <div className="fixed z-10 bottom-1 left-1 h-fit w-16  bg-orange-600  rounded-3xl text-white flex flex-col items-center justify-center m-4 p-6 shadow-lg">
-      {/* Social media icons */}
-      <a
-        href="https://www.github.com/dans2177"
-        className="text-gray-200 text-2xl mb-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/daniel-shemon-0931b122a/"
-        className="text-gray-200 text-2xl mb-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin />
-      </a>
-      <a
-        href="https://www.instagram.com/daniel_d_ridley"
-        className="text-gray-200 text-2xl mb-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaInstagram />
-      </a>
-      <a
-        href="https://twitter.com/danieldridley"
-        className="text-gray-200 text-2xl "
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter />
-      </a>
+    <div>
+      <div className="fixed z-10 bottom-1 left-1 h-fit w-12  bg-white rounded-3xl text-white flex flex-col items-center justify-center  m-4 py-4  shadow-lg  border-2 border-orange-500  dark:bg-gray-800 ">
+        {/* Social media icons */}
+        <a
+          href="https://www.github.com/dans2177"
+          className="text-gray-800 dark:text-gray-200 text-2xl mb-4 hover:text-violet-400 dark:hover:text-violet-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/daniel-shemon-0931b122a/"
+          className="text-gray-800 dark:text-gray-200 text-2xl mb-4 hover:text-blue-500 dark:hover:text-blue-500"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://www.instagram.com/daniel_d_ridley"
+          className="text-gray-800 dark:text-gray-200  text-2xl mb-4 hover:text-pink-400 dark:hover:text-pink-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://twitter.com/danieldridley"
+          className="text-gray-800 dark:text-gray-200  text-2xl hover:text-red-400 dark:hover:text-red-400"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaSquareXTwitter />
+        </a>
+      </div>
     </div>
   );
 }

@@ -117,31 +117,33 @@ function Resume() {
 
   return (
     <>
-      <div className="container mt-20 mx-auto p-4 max-w-6xl ">
-        <h2 className="text-6xl pl-6 font-prata text-amber-400 text-center sm:text-left">
+      <div className="container mt-10 mx-auto p-4 max-w-6xl ">
+        <h2 className="text-4xl md:text-6xl pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left">
           Resume
         </h2>
         {/* Grid Container */}
-        <div className="grid grid-cols-1 bg-black bg-opacity-40 p-4 m-4 border-2 border-amber-400 rounded-lg md:grid-cols-3 gap-4 text-white">
+        <div className="grid grid-cols-1 bg-white dark:bg-black bg-opacity-40 p-4 m-4 border-2 border-black rounded-lg md:grid-cols-3 gap-4 text-white">
           {/* Work Experience Section - takes up two columns on medium screens */}
-          <div className="md:col-span-2 border-b md:border-b-0 border-amber-400 pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left p-4 m-4 text-amber-500 mb-5">
+          <div className="md:col-span-2 border-b md:border-b-0 border-black pb-4 md:pb-0">
+            <h2 className="text-xl font-comfortaa text-left p-4 m-4 text-amber-700 dark:text-amber-500 mb-5">
               Work Experience
             </h2>
             {professionalExperience.map((exp, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-gray-800 transform transition duration-500 hover:scale-105"
+                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-amber-600  dark:hover:bg-amber-700 transform transition duration-500 "
               >
-                <h3 className="font-bold text-white text-lg">
+                <h3 className="font-bold text-gray-800 dark:text-white hover:text-white text-lg">
                   {exp.role} - {exp.company}
                 </h3>
-                <p className="italic text-gray-400">{exp.period}</p>
+                <p className="italic text-gray-700 dark:text-gray-400">
+                  {exp.period}
+                </p>
                 <ul className="list-disc list-inside space-y-2">
                   {exp.tasks.map((task, taskIndex) => (
                     <li
                       key={taskIndex}
-                      className="text-gray-300 pl-4 max-w-3xl"
+                      className="text-gray-900 dark:text-gray-200 pl-4 max-w-3xl"
                     >
                       {task}
                     </li>
@@ -152,37 +154,39 @@ function Resume() {
           </div>
 
           {/* Volunteer Section - takes up one column on medium screens */}
-          <div className="md:col-span-1 border-b md:border-b-0 border-amber-400 pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-amber-500">
+          <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
+            <h2 className="text-xl font-comfortaa text-left text-purple-800 dark:text-purple-400 m-4 p-4 ">
               Volunteer Work
             </h2>
             {volunteer.map((vol, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-purple-900 transform transition duration-500 hover:scale-110 hover:bg-purple-800"
+                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 transform transition duration-500  dark:hover:bg-purple-800 hover:bg-purple-800"
               >
-                <h3 className="font-bold text-white text-lg mb-2">
+                <h3 className="font-bold text-gray-900 hover:text-white dark:text-white text-lg mb-2">
                   {vol.role}
                 </h3>
-                <p className="text-gray-300">{vol.details}</p>
+                <p className="text-gray-900 dark:text-gray-200">
+                  {vol.details}
+                </p>
               </div>
             ))}
           </div>
 
           {/* Certifications Section - takes up one column */}
-          <div className="md:col-span-1 border-b md:border-b-0 border-amber-400 pb-4 md:pb-0">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-amber-500">
+          <div className="md:col-span-1 border-b md:border-b-0 border-black pb-4 md:pb-0">
+            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-blue-600 dark:text-blue-400">
               Certifications
             </h2>
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-blue-900 transform transition duration-500 hover:scale-110 hover:bg-blue-800"
+                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-blue-900 dark:hover:bg-blue-900 transform transition duration-500 "
               >
-                <h3 className="font-bold text-white text-lg mb-2">
+                <h3 className="font-bold text-gray-900 hover:text-white dark:text-white text-lg mb-2">
                   {cert.title}
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-900 dark:text-gray-300">
                   {cert.issuer} - {cert.date}
                 </p>
               </div>
@@ -191,22 +195,26 @@ function Resume() {
 
           {/* Education Section - takes up two columns on medium screens */}
           <div className="md:col-span-2">
-            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-amber-500">
+            <h2 className="text-xl font-comfortaa text-left m-4 p-4 text-green-600 dark:text-green-400">
               Education
             </h2>
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="m-6 p-4 shadow-lg rounded-lg bg-green-900 transform transition duration-500 hover:scale-105"
+                className="m-6 p-4 shadow-lg rounded-lg bg-gray-200  dark:bg-gray-800 hover:bg-green-900 transform transition duration-500 "
               >
-                <h3 className="font-bold text-white">{edu.institution}</h3>
-                <p className="italic text-gray-400">{edu.year}</p>
+                <h3 className="font-bold text-gray-800 hover:text-white dark:text-white">
+                  {edu.institution}
+                </h3>
+                <p className="italic text-gray-900 dark:text-gray-400">
+                  {edu.year}
+                </p>
                 <ul className="list-disc list-inside space-y-2">
-                  <li className="text-gray-300 pl-4 max-w-3xl">
+                  <li className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
                     {" "}
                     {edu.degree}{" "}
                   </li>
-                  <li className="text-gray-300 pl-4 max-w-3xl">
+                  <li className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
                     {" "}
                     {edu.details}{" "}
                   </li>
@@ -217,7 +225,7 @@ function Resume() {
         </div>
 
         {/* Download Resume Button - centered below the grid */}
-        <div className="flex justify-center m-8">
+        <div className="flex justify-center ">
           <button
             onClick={handleDownloadResume}
             className="flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md bg-amber-400 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400"

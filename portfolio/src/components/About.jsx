@@ -6,20 +6,20 @@ const sections = [
   {
     title: "The Spark in 7th Grade",
     description:
-      "I assembled my first 3D printer from a kit of hundreds of pieces back in 7th grade, technology has been more than just a passion—it's been my calling. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something far greater.",
+      "I assembled my first 3D printer from a kit of hundreds of pieces back in 7th grade, technology has always been a hobby. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something I would have a passion for.",
     imgSrc: "/Chapter_1.png",
   },
   {
     title: "The High School Chapter",
     description:
-      "In high school, I mastered 3D printing, helping set up our school's lab and planning to develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
+      "In high school, I was reconized for my 3D printing knowledge, and was asked with helping set up our school's lab and planning to develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
     imgSrc: "/Chapter_2.png",
   },
   {
     date: "",
     title: "The College Years",
     description:
-      "As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. ",
+      "As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. I fell in love with the process, community, and power of coding.",
     imgSrc: "/Chapter_3.png",
   },
 ];
@@ -29,79 +29,91 @@ function About() {
   const toggleTimeline = () => setIsTimelineExpanded(!isTimelineExpanded);
 
   return (
-    <div className="max-w-2xl mt-40 mx-auto sm:justify-center sm:align-middle bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg shadow-xl">
-      <section className="m-4">
-        <h2 className="text-6xl pb-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600 text-center sm:text-left">
-          About Me
-        </h2>
+    <div className="container mt-10 md:mt-20  mx-auto p-4 max-w-6xl ">
+      <h2 className="text-4xl md:text-6xl  font-prata pb-6 font-bold text-transparent bg-clip-text bg-gray-900 dark:bg-gray-200 text-center  sm:text-left">
+        About Me
+      </h2>
+      <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
+        <section className="m-4">
+          <div className="flex flex-col sm:flex-row items-center ">
+            <div className="sm:w-1/2">
+              {/* Image below the title on small screens */}
+              <div className="block sm:hidden">
+                <img
+                  src="/Handsome.jpeg"
+                  alt="About Me"
+                  className="rounded-full w-80 h-80 mb-4 mx-auto object-cover shadow-lg"
+                />
+              </div>
 
-        <div className="flex flex-col-reverse sm:flex-row items-center mt-4">
-          {/* Text on the left for large screens and below image for small screens */}
-          <div className="sm:w-1/2 sm:pr-8">
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-lg">
-              <ul className="list-disc space-y-4 font-semibold text-gray-100 text-lg text-center sm:text-left pl-5">
-                <li>Self-taught Developer</li>
-                <li>Business Management Major</li>
-                <li>3D Printing Expert</li>
-                <li>Innovative Problem Solver</li>
-                <li>
-                  Driven by Dedication, and Dedicated to Servant Leadership
-                </li>
-              </ul>
+              <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
+                <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
+                  Born in New York City, and raised in the Midwest.
+                  <br />
+                  <br /> I enjoy traveling, working out, and making random
+                  inventions with my 3D Printer.
+                  <br />
+                  <br /> In college, a spark for technology was resparked and I
+                  started my journey to learning coding while persuing a
+                  business manamgement degree.
+                  <br />
+                  <br /> This website is to show how far I have come...
+                </h3>
+              </div>
+            </div>
+
+            {/* Image on the right for large screens */}
+            <div className="hidden sm:block sm:w-1/2 sm:pl-8">
+              <img
+                src="/Handsome.jpeg"
+                alt="About Me"
+                className="rounded-full w-80 h-80 mb-4 sm:mb-0 mx-32 sm:mx-0 object-cover shadow-lg"
+              />
             </div>
           </div>
-          {/* Image on the right for large screens and on top for small screens */}
-          <div className="flex-shrink-0 sm:w-1/2 sm:pl-8">
-            <img
-              src="/Handsome.jpeg"
-              alt="About Me"
-              className="rounded-full w-64 h-64 mb-4 sm:mb-0 mx-auto sm:mx-0 object-cover shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="px-10">
-        <div className="relative border-l-2 border-grey-400 mt-20">
+        <div className="md:mt-10">
           <h2
             onClick={toggleTimeline}
-            className="text-4xl p-6 font-prata text-amber-400 cursor-pointer"
+            className="text-2xl md:text-4xl font-prata text-gray-900 dark:text-gray-100 cursor-pointer"
           >
-            Timeline into Tech
             {/* Icon button to toggle the expand/collapse of the timeline */}
-            <button className="ml-4 text-amber-400">
+            <button className=" text-amber-500">
               {isTimelineExpanded ? <MdExpandLess /> : <MdExpandMore />}
             </button>
+            Timeline into Tech
           </h2>
+          <div className="relative border-l-2 border-grey-400 md:mx-12">
+            {/* Conditional rendering based on isTimelineExpanded */}
+            {isTimelineExpanded && (
+              <ol>
+                {sections.map((section, index) => (
+                  <li
+                    key={index}
+                    className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-10 p-4 m-4 rounded-xl"
+                  >
+                    <div className="absolute left-0 -ml-3 mt-2 w-6 h-6 bg-orange-600 rounded-full border-2 border-black"></div>
 
-          {/* Conditional rendering based on isTimelineExpanded */}
-          {isTimelineExpanded && (
-            <ol>
-              {sections.map((section, index) => (
-                <li
-                  key={index}
-                  className="mb-10 ml-4 flex flex-col md:flex-row items-center bg-black bg-opacity-40 p-4 m-4 rounded-xl"
-                >
-                  <div className="absolute left-0 -ml-3 mt-2 w-6 h-6 bg-amber-400 rounded-full border-2 border-black"></div>
+                    <img
+                      src={section.imgSrc}
+                      alt={section.title}
+                      className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last"
+                    />
 
-                  <img
-                    src={section.imgSrc}
-                    alt={section.title}
-                    className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last"
-                  />
-
-                  <div className="flex-grow max-w-3xl md:order-first">
-                    <h3 className="text-lg pb-4 font-semibold font-prata text-amber-400">
-                      {section.title}
-                    </h3>
-                    <p className="text-base font-prata text-gray-200">
-                      {section.description}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          )}
+                    <div className="flex flex-col justify-between flex-grow max-w-3xl md:order-first">
+                      <h3 className="text-2xl pb-4 font-comfortaa  text-orange-600 dark:text-amber-400">
+                        {section.title}
+                      </h3>
+                      <p className="pt-6 text-lg font-comfortaa dark:text-gray-200">
+                        {section.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
         </div>
       </div>
     </div>
