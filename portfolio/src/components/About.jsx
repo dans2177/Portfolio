@@ -57,7 +57,7 @@ function About() {
                   started my journey to learn coding while persuing a
                   business manamgement degree.
                   <br />
-                  <br /> This website is to show how far I have come...
+                  <br /> This website is to showcase my how far I have come...
                 </h3>
               </div>
             </div>

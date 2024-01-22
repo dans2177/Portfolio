@@ -6,18 +6,20 @@ function Projects() {
     {
       title: "Family Cookbook",
       description:
-        "A private digital repository for our family to share and cherish generations of recipes. A simple family phrase unlocks the ability to add and edit, keeping our culinary heritage at our fingertips.",
+        "( Frontend: Vite + TailwindCSS ) A  digital repository for my family to share and cherish generations of recipes.  Keeping our culinary heritage at our fingertips.",
       imageUrl: "./Shemon_Cookbook.png",
       link: "https://github.com/dans2177/Shemon-Cookbook",
       linkType: "github",
+      demo: "https://www.shemoncookbook.com/",
     },
     {
       title: "Filament Tracker",
       description:
-        "Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
+        "(Full Stack) Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, Redux, Auth0 and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
       imageUrl: "/Filament_Tracker.png",
       link: "https://github.com/dans2177/Box3D-Frontend",
       linkType: "github",
+      demo: "https://www.3dlogbook.com/",
     },
   ];
 

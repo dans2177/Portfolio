@@ -14,7 +14,7 @@ function Resume() {
       degree: "High School Diploma",
       year: "2017 – 2021",
       details:
-        "Graduated with High Honors Roll, participated in sports and debate, and mentored elementary school children.",
+        "Graduated with High Honors Roll, participated in sports and debate, and mentored elementary students.",
     },
   ];
 
