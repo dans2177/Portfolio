@@ -53,7 +53,8 @@ function About() {
                   <br /> I'm passionate about travel, whether it's the energy of
                   big cities or the tranquility of towering mountains. I enjoy
                   keeping active, be it running with my goldendoodle Craig or
-                  working out at the gym, and I also like to make random inventons with my 3D Printer.
+                  working out at the gym, and I also like to make random
+                  inventons with my 3D Printer.
                   <br />
                   <br /> In college, a spark for technology was resparked and I
                   started my journey to learn coding through Codecademy while
@@ -81,11 +82,11 @@ function About() {
             onClick={toggleTimeline}
             className="text-2xl md:text-4xl font-prata text-gray-900 hover:text-orange-500 dark:hover:text-orange-500 dark:text-gray-100 cursor-pointer"
           >
+            Timeline into Tech
             {/* Icon button to toggle the expand/collapse of the timeline */}
             <button className=" ">
               {isTimelineExpanded ? <MdExpandLess /> : <MdExpandMore />}
             </button>
-            Timeline into Tech
           </h2>
           <div className="relative border-l-2 border-grey-400 md:mx-12">
             {/* Conditional rendering based on isTimelineExpanded */}
