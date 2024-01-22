@@ -57,11 +57,11 @@ function Skills() {
   ];
 
   return (
-    <div className="container mt-10 mx-auto p-4 max-w-6xl transform transition duration-1000 ">
-      <h2 className="text-4xl md:text-6xl sm:pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left ">
+    <div className="container mt-10 mx-auto  sm:p-4 max-w-6xl ">
+      <h2 className="text-4xl pb-4 md:text-6xl sm:pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left ">
         Skills
       </h2>
-      <div className="mt-4  mx-4 sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-2 rounded-lg dark:shadow-xl">
+      <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
         <div className="m-4 transform transition duration-500">
           <ul className="list-none flex flex-wrap justify-center">
             {skillSet.map((skillItem, index) => (

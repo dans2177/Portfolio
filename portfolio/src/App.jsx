@@ -17,35 +17,35 @@ function App() {
 
 
   return (
-      <DarkModeProvider>
+    <DarkModeProvider>
       <div className="bg-gray-200 dark:bg-gray-800">
-          <Navbar />
-          <ScrollToTopButton />
+        <Navbar />
+        <ScrollToTopButton />
 
-          <Sidebar />
+        <Sidebar />
 
-          <div id="header">
-            <Header />
-          </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="projects">
-            <Projects />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
-          <div id="resume">
-            <Resume />
-          </div>
-          <div id="skills">
-            <Skills />
-          </div>
-
-          <Footer />
+        <div id="header">
+          <Header />
         </div>
-      </DarkModeProvider>
+        <div id="about">
+          <About />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="resume">
+          <Resume />
+        </div>
+
+        <Footer />
+      </div>
+    </DarkModeProvider>
   );
 }
 

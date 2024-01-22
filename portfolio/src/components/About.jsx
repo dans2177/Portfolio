@@ -50,12 +50,15 @@ function About() {
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
                   Born in New York, and raised in the Midwest.
                   <br />
-                  <br /> I enjoy traveling, being active, and making random
-                  inventions/projects.
+                  <br /> I'm passionate about travel, whether it's the energy of
+                  big cities or the tranquility of towering mountains. I enjoy
+                  keeping active, be it running with my goldendoodle Craig or
+                  working out at the gym, and I also like to make random inventons with my 3D Printer.
                   <br />
                   <br /> In college, a spark for technology was resparked and I
-                  started my journey to learn coding while persuing a
-                  business manamgement degree.
+                  started my journey to learn coding through Codecademy while
+                  persuing a business manamgement degree at Grand Canyon
+                  Unvisersity.
                   <br />
                   <br /> This website is to showcase my how far I have come...
                 </h3>
