@@ -3,15 +3,15 @@ import React from "react";
 function Resume() {
   const education = [
     {
-      institution: "Grand Canyon University",
-      degree: "Bachelor's Degree in Business Administration",
+      institution: "Grand Canyon University ",
+      degree: "Bachelor's Degree in Business Administration (3.5 gpa)",
       year: "2021-2025 (Expected)",
       details:
         "Active involvement in recreational sports and community service groups on campus.",
     },
     {
-      institution: "Sioux Falls Christian",
-      degree: "High School Diploma",
+      institution: "Sioux Falls Christian ",
+      degree: "High School Diploma (3.8 gpa)",
       year: "2017 – 2021",
       details:
         "Graduated with High Honors Roll, participated in sports and debate, and mentored elementary students.",
