@@ -33,16 +33,16 @@ function App() {
         <div id="projects">
           <Projects />
         </div>
-        <div id="contact">
-          <Contact />
-        </div>
+
         <div id="skills">
           <Skills />
         </div>
         <div id="resume">
           <Resume />
         </div>
-
+        <div id="contact">
+          <Contact />
+        </div>
         <Footer />
       </div>
     </DarkModeProvider>
