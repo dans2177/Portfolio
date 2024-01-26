@@ -44,7 +44,7 @@ function ProjectPopup({ project, closeModal }) {
               {project.title}
             </h3>
             <p className="mb-4 font-comfortaa dark:text-white">{project.description}</p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <a
                 href={project.demo}
                 target="_blank"

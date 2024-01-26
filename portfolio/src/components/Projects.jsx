@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaRegWindowMaximize } from "react-icons/fa";
 import { useState } from "react";
 import ProjectsPopup from "./ProjectsPopup";
 import img1 from "../img_3d_logbook/pi1.png";
@@ -105,7 +105,7 @@ function Projects() {
               />
               <div className="absolute inset-0 bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                 {/* Ensure the icon is only visible on hover */}
-                <FaGithub className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <FaRegWindowMaximize className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-4 flex flex-col justify-between h-full w-full">
                 <h3 className="text-xl pb-4 text-bold font-semibold font-comfortaa dark:text-amber-400 mt-4">
@@ -115,10 +115,7 @@ function Projects() {
                   <div className="flex flex-wrap gap-3 justify-start">
                     {/* Internal flex container for tech stack */}
                     {project.techStack.split(", ").map((tech, idx) => (
-                      <div
-                        key={idx}
-                        className="flex justify-center items-left"
-                      >
+                      <div key={idx} className="flex justify-center items-left">
                         <div className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg">
                           <div className="w-8 h-8 flex justify-center items-center">
                             {getTechIcon(tech.trim())}
