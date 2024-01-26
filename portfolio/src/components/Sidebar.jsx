@@ -3,7 +3,6 @@ import React from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
   FaSquareXTwitter,
 } from "react-icons/fa6";
 // Import the useDarkMode hook
@@ -29,14 +28,6 @@ function Sidebar() {
           rel="noopener noreferrer"
         >
           <FaLinkedin />
-        </a>
-        <a
-          href="https://www.instagram.com/daniel_d_ridley"
-          className="text-gray-800 dark:text-gray-200  text-2xl mb-4 hover:text-pink-400 dark:hover:text-pink-400"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram />
         </a>
         <a
           href="https://twitter.com/danieldridley"
