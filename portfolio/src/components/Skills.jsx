@@ -8,7 +8,9 @@ import {
   FaDatabase,
   FaLock,
   FaPrint, // Importing the assumed 3D printing icon
+  FaGithub, // Keep this import and remove the duplicate
 } from "react-icons/fa";
+
 import { SiTailwindcss, SiMongodb, SiRedux } from "react-icons/si";
 import { GiGearHammer } from "react-icons/gi";
 
@@ -53,6 +55,10 @@ function Skills() {
     {
       skill: "CAD",
       icon: <GiGearHammer className="text-orange-600" size="4em" />,
+    },
+    {
+      skill: "GitHub",
+      icon: <FaGithub className="text-gray-600" size="4em" />,
     },
   ];
 

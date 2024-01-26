@@ -19,7 +19,7 @@ function ProjectPopup({ project, closeModal }) {
         <div className="flex justify-end">
           <button
             onClick={closeModal}
-            className="text-xl mb-4 p-1 bg-red-100 rounded-full text-red-500"
+            className="text-xl mb-4 p-1 hover:bg-gray-400 dark:bg-red-100 dark:hover:bg-red-500 rounded-full text-red-500 dark:hover:text-red-800"
           >
             <FaTimes />
           </button>
@@ -40,10 +40,10 @@ function ProjectPopup({ project, closeModal }) {
             </Slide>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-2 font-comfortaa">
+            <h3 className="text-xl font-bold mb-2 font-comfortaa dark:text-white">
               {project.title}
             </h3>
-            <p className="mb-4 font-comfortaa">{project.description}</p>
+            <p className="mb-4 font-comfortaa dark:text-white">{project.description}</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={project.demo}
@@ -51,15 +51,15 @@ function ProjectPopup({ project, closeModal }) {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
               >
-                <FaPlay className="mr-2" /> Demo
+                <FaPlay className="mr-2" size={22} /> Demo
               </a>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900 transition"
+                className="flex items-center justify-center bg-orange-600 text-white py-2 px-4 rounded hover:bg-orange-900 transition"
               >
-                <FaGithub className="mr-2" /> GitHub
+                <FaGithub className="mr-2" size={28} /> GitHub
               </a>
             </div>
           </div>
