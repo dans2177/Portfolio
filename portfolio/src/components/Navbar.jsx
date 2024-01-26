@@ -28,15 +28,14 @@ const Navbar = () => {
         >
           Projects
         </li>
-        <li className={navItemClass} onClick={() => scrollToSection("contact")}>
-          Contact
+        <li className={navItemClass} onClick={() => scrollToSection("skills")}>
+          Skills
         </li>
-
         <li className={navItemClass} onClick={() => scrollToSection("resume")}>
           Resume
         </li>
-        <li className={navItemClass} onClick={() => scrollToSection("skills")}>
-          Skills
+        <li className={navItemClass} onClick={() => scrollToSection("contact")}>
+          Contact
         </li>
       </ul>
     </nav>
