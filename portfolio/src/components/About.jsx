@@ -50,10 +50,10 @@ function About() {
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
                   Born in New York, and raised in the Midwest.
                   <br />
-                  <br /> I'm passionate about travel, whether it's the energy of
-                  big cities or the tranquility of towering mountains. I enjoy
-                  keeping active, be it running with my goldendoodle Craig or
-                  working out at the gym, and I also like to make random
+                  <br /> I love traveling, whether it's the energy of
+                  big cities or the tranquility of nature. I enjoy
+                  keeping active, wether it is running with my goldendoodle Craig or
+                  working out at the gym. I also like to make random
                   inventons with my 3D Printer.
                   <br />
                   <br /> In college, a spark for technology was resparked and I
