@@ -12,14 +12,14 @@ const sections = [
   {
     title: "The High School Chapter",
     description:
-      "In high school, I was reconized for my 3D printing knowledge, and was asked with helping set up our school's lab and planning to develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
+      "In high school, I was recognized for my 3D printing knowledge and was asked to help set up our lab and develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
     imgSrc: "/Chapter_2.png",
   },
   {
     date: "",
     title: "The College Years",
     description:
-      "As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. I fell in love with the process, community, and power of coding.",
+      " As I transitioned into my college life at Grand Canyon University, my curiosity steered me toward coding. It became more than just an academic endeavor; it became the backbone of several projects I undertook. I fell in love with the process, community, and power of coding.",
     imgSrc: "/Chapter_3.png",
   },
 ];
@@ -48,20 +48,20 @@ function About() {
 
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
-                  Born in New York, and raised in the Midwest.
+                  Born in New York and raised in Sioux Falls, SD.
                   <br />
-                  <br /> I love traveling, whether it's the energy of
-                  big cities or the tranquility of nature. I enjoy
-                  keeping active, wether it is running with my goldendoodle Craig or
-                  working out at the gym. I also like to make random
-                  inventons with my 3D Printer.
+                  <br /> I love traveling, whether it's the energy of big cities
+                  or nature's tranquility. I enjoy keeping active, whether
+                  running with my Goldendoodle Craig or working out at the gym.
+                  I also like to make random inventions with my 3D Printer.
                   <br />
-                  <br /> In college, a spark for technology was resparked and I
-                  started my journey to learn coding through Codecademy while
-                  persuing a business manamgement degree at Grand Canyon
-                  Unvisersity.
+                  <br /> In college, the spark for technology was rekindled, and
+                  I started my journey to learn coding through Codecademy while
+                  pursuing a business management degree at Grand Canyon
+                  University.
                   <br />
-                  <br /> This website is to showcase my how far I have come...
+                  <br/>
+                  This website is to showcase how far I have come...
                 </h3>
               </div>
             </div>
