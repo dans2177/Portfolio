@@ -60,7 +60,7 @@ function About() {
                   pursuing a business management degree at Grand Canyon
                   University.
                   <br />
-                  <br/>
+                  <br />
                   This website is to showcase how far I have come...
                 </h3>
               </div>
@@ -69,7 +69,7 @@ function About() {
             {/* Image on the right for large screens */}
             <div className="hidden sm:block sm:w-1/2 sm:pl-8">
               <img
-                src="/Handsome.jpeg"
+                src="/Handsome.jpg"
                 alt="About Me"
                 className="rounded-full w-80 h-80 mb-4 sm:mt-4 md:ml-10 mx-32 sm:mx-0 object-cover shadow-lg"
               />
