@@ -35,7 +35,7 @@ function About() {
       </h2>
       <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
         <section className="m-4">
-          <div className="flex flex-col sm:flex-row items-center ">
+          <div className="flex flex-col sm:flex-row items-center border-b-2 pb-4 border-orange-500">
             <div className="sm:w-1/2">
               {/* Image below the title on small screens */}
               <div className="block sm:hidden">
