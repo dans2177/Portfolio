@@ -40,7 +40,7 @@ function About() {
               {/* Image below the title on small screens */}
               <div className="block sm:hidden">
                 <img
-                  src="/Handsome.jpeg"
+                  src="/Handsome.jpg"
                   alt="About Me"
                   className="rounded-full w-80 h-80 mb-4 mx-auto object-cover shadow-lg"
                 />
