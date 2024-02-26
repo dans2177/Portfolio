@@ -48,17 +48,20 @@ function About() {
 
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
-                  Born in New York and raised in Sioux Falls, SD.
+                  Born in New York and raised in Sioux Falls, SD, I embarked on
+                  a self-taught coding journey while pursuing a business
+                  management degree at Grand Canyon University.
                   <br />
-                  <br /> I love traveling, whether it's the energy of big cities
-                  or nature's tranquility. I enjoy keeping active, whether
-                  running with my Goldendoodle Craig or working out at the gym.
-                  I also like to make random inventions with my 3D Printer.
                   <br />
-                  <br /> In college, the spark for technology was rekindled, and
-                  I started my journey to learn coding through Codecademy while
-                  pursuing a business management degree at Grand Canyon
-                  University.
+                  Passionate about technology and servant leadership, I am
+                  committed to using my skills to serve and innovate.
+                  <br />
+                  <br />
+                  With a keen attention to detail and a ScrumMaster(CSM)
+                  certification, I strive for excellence in every project,
+                  aiming to deliver solutions that meet high quality and user
+                  experience standards. My dedication to making a positive
+                  impact through technology drives my professional journey.
                   <br />
                   <br />
                   This website is to showcase how far I have come...
