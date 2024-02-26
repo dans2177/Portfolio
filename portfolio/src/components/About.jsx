@@ -48,7 +48,7 @@ function About() {
 
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
-                  Born in New York and raised in Sioux Falls, SD, I embarked on
+                  I embarked on
                   a self-taught coding journey while pursuing a business
                   management degree at Grand Canyon University.
                   <br />
