@@ -6,13 +6,13 @@ const sections = [
   {
     title: "The Spark in 7th Grade",
     description:
-      "I assembled my first 3D printer from a kit of hundreds of pieces back in 7th grade, technology has always been a hobby. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something I would have a passion for.",
+      "I assembled my first 3D printer from a kit of hundreds of pieces in 7th grade; technology has always been a hobby of mine. What started as a playful hobby to create fidget toys (that my teachers weren't too fond of) evolved into something I would have a passion for.",
     imgSrc: "/Chapter_1.png",
   },
   {
     title: "The High School Chapter",
     description:
-      "In high school, I was recognized for my 3D printing knowledge and was asked to help set up our lab and develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
+      "In high school, I was recognized for my 3D printing knowledge and was asked to help set up our 3D printing lab and develop a student lesson plan. But as COVID-19 hit, I pivoted, taking the lab's equipment home to produce and donate medical supplies.",
     imgSrc: "/Chapter_2.png",
   },
   {
@@ -48,9 +48,8 @@ function About() {
 
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
-                  I embarked on
-                  a self-taught coding journey while pursuing a business
-                  management degree at Grand Canyon University.
+                  While pursuing a business management degree at Grand Canyon
+                  University, I embarked on a self-taught coding journey.
                   <br />
                   <br />
                   Passionate about technology and servant leadership, I am
@@ -58,8 +57,8 @@ function About() {
                   <br />
                   <br />
                   With a keen attention to detail and a ScrumMaster(CSM)
-                  certification, I strive for excellence in every project,
-                  aiming to deliver solutions that meet high quality and user
+                  certification, I strive for excellence in every project. I aim
+                  to deliver solutions that meet high quality and user
                   experience standards. My dedication to making a positive
                   impact through technology drives my professional journey.
                   <br />

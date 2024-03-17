@@ -43,12 +43,12 @@ function Resume() {
     {
       role: "Rotary International",
       details:
-        "Participated in events that provided a safe and inclusive space for children with unique needs.",
+        "Participated in events that provided a safe and inclusive space for children with special needs.",
     },
     {
       role: "The Banquet",
       details:
-        "Serving and preparing meals for homeless and low-income families, being someone that will listen to them.",
+        "Serving and preparing meals for homeless and low-income families, and provided a listening ear.",
     },
     {
       role: "Operation Christmas Child",
@@ -79,10 +79,10 @@ function Resume() {
       company: "Highest Health Chiropractic",
       period: "April - August 2023",
       tasks: [
-        "Tech Setup during Office Relocation: Coordinated the company's move to a new location, ensuring all tech equipment was set up for a seamless transition.",
-        "Going Paperless: Created a plan to switch to digital forms for all office paperwork and finished on schedule.",
-        "Data Management: Responsible for data entry tasks, ensuring high levels of accuracy across all systems.",
-        "Customer Interaction: Actively engaged with customers to provide professional service and address any concerns.",
+        "Assisted in ech setup during office relocation: Coordinated with the company to move to a new location, ensuring all tech equipment was set up for a seamless transition.",
+        "Going paperless: Created a plan to switch to digital forms for all office paperwork and finished on schedule.",
+        "Data management: Responsible for data entry tasks, ensuring high levels of accuracy across all systems.",
+        "Customer interaction: Actively engaged with customers to provide professional service and address any concerns.",
       ],
     },
     {
@@ -135,12 +135,12 @@ function Resume() {
                 </p>
                 <ul className="list-disc list-inside space-y-2">
                   {exp.tasks.map((task, taskIndex) => (
-                    <li
+                    <p
                       key={taskIndex}
                       className="text-gray-900 dark:text-gray-200 pl-4 max-w-3xl"
                     >
-                      {task}
-                    </li>
+                      - {task}
+                    </p>
                   ))}
                 </ul>
               </div>

@@ -57,7 +57,7 @@ function Projects() {
     {
       title: "Filament Tracker",
       description:
-        "( Full Stack ) Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, Redux, Auth0 and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
+        "( Full Stack ) Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
       imageUrl: "/Filament_Tracker.png",
       link: "https://github.com/dans2177/Box3D-Frontend",
       linkType: "github",
