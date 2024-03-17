@@ -204,14 +204,14 @@ function Resume() {
                   {edu.year}
                 </p>
                 <ul className="list-disc list-inside space-y-2">
-                  <li className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
+                  <p className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
                     {" "}
-                    {edu.degree}{" "}
-                  </li>
-                  <li className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
+                    - {edu.degree}{" "}
+                  </p>
+                  <p className="text-gray-900 dark:text-gray-300 pl-4 max-w-3xl">
                     {" "}
-                    {edu.details}{" "}
-                  </li>
+                    - {edu.details}{" "}
+                  </p>
                 </ul>
               </div>
             ))}
