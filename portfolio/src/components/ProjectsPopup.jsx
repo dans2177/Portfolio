@@ -45,22 +45,22 @@ function ProjectPopup({ project, closeModal }) {
             </h3>
             <p className="mb-4 font-comfortaa dark:text-white">{project.description}</p>
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              <a
+              {project.demo && <a
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
               >
                 <FaPlay className="mr-2" size={22} /> Demo
-              </a>
-              <a
+              </a>}
+         { project.link &&    <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center bg-orange-600 text-white py-2 px-4 rounded hover:bg-orange-900 transition"
               >
                 <FaGithub className="mr-2" size={28} /> GitHub
-              </a>
+              </a>}
             </div>
           </div>
         </div>

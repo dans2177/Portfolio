@@ -12,6 +12,13 @@ import img7 from "../img_cookbook/pi1.png";
 import img8 from "../img_cookbook/pi2.png";
 import img9 from "../img_cookbook/pi3.png";
 import img10 from "../img_cookbook/pi4.png";
+
+import img11 from "../img_productivity/img1.png";
+import img12 from "../img_productivity/img2.png";
+import img13 from "../img_productivity/img3.png";
+import img14 from "../img_productivity/img4.png";
+import img15 from "../img_productivity/img5.png";
+
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import {
   SiRedux,
@@ -55,6 +62,17 @@ function Projects() {
 
   const projects = [
     {
+      title: "TimeHack (Coming Soon)",
+      description:
+        "( Full Stack ) A productivity app that helps users track their time and tasks. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient time management. There is a daily todo section and foudational habits that resets at midnight. A project/class section to keep track of upcoming tasks and where they are along the process. Other features coming soon.",
+      imageUrl: "./productivity.webp",
+      link: "",
+      linkType: "",
+      demo: "",
+      images: [img13, img15, img12, img11, img14],
+      techStack: "MongoDB, Express.js, React, Redux, Auth0, Node.js",
+    },
+    {
       title: "Filament Tracker",
       description:
         "( Full Stack ) Material monitoring solution for 3D printing enthusiasts to track and manage their filament supplies. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient inventory management.",
@@ -88,7 +106,7 @@ function Projects() {
       <h2 className="text-4xl md:pl-4 md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
         Projects
       </h2>
-      <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -108,11 +126,11 @@ function Projects() {
                 <FaRegWindowMaximize className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-4 flex flex-col justify-between h-full w-full">
-                <h3 className="text-xl pb-4 text-bold font-semibold font-comfortaa dark:text-amber-400 mt-4">
+                <h3 className="text-xl pb-4 text-bold text-center font-semibold font-comfortaa dark:text-amber-400 mt-4">
                   {project.title}
                 </h3>
                 <div className="flex flex-col justify-start h-full pt-4 pb-2">
-                  <div className="flex flex-wrap gap-3 justify-start">
+                  <div className="flex flex-wrap gap-3 justify-center">
                     {/* Internal flex container for tech stack */}
                     {project.techStack.split(", ").map((tech, idx) => (
                       <div key={idx} className="flex justify-center items-left">

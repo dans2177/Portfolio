@@ -5,9 +5,9 @@ function Resume() {
     {
       institution: "Grand Canyon University ",
       degree: "Bachelor's Degree in Business Administration (3.5 gpa)",
-      year: "2021-2025 (Expected)",
+      year: "2021-2024 (Expected)",
       details:
-        "Active involvement in recreational sports and community service groups on campus.",
+        "Active involvement in recreational sports and community service groups on campus. Also was involved in GCU's Idea Club where people bring their ideas in a Shark Tank style competition. Graduating a semester early.",
     },
     {
       institution: "Sioux Falls Christian ",
@@ -80,7 +80,7 @@ function Resume() {
       period: "April - August 2023",
       tasks: [
         "Assisted in ech setup during office relocation: Coordinated with the company to move to a new location, ensuring all tech equipment was set up for a seamless transition.",
-        "Going paperless: Created a plan to switch to digital forms for all office paperwork and finished on schedule.",
+        "Going paperless: Created a plan to switch to digital forms for all office paperwork.",
         "Data management: Responsible for data entry tasks, ensuring high levels of accuracy across all systems.",
         "Customer interaction: Actively engaged with customers to provide professional service and address any concerns.",
       ],

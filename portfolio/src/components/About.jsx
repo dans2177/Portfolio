@@ -49,7 +49,10 @@ function About() {
               <div className=" dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
                   While pursuing a business management degree at Grand Canyon
-                  University, I embarked on a self-taught coding journey.
+                  University, from which I am graduating a semester early, I
+                  embarked on a self-taught coding journey. Passionate about
+                  technology and servant leadership, I am committed to using my
+                  skills to serve and innovate.
                   <br />
                   <br />
                   Passionate about technology and servant leadership, I am
