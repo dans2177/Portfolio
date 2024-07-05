@@ -50,16 +50,12 @@ function About() {
                 <h3 className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white">
                   While pursuing a business management degree at Grand Canyon
                   University, from which I am graduating a semester early, I
-                  embarked on a self-taught coding journey. Passionate about
-                  technology and servant leadership, I am committed to using my
-                  skills to serve and innovate.
+                  embarked on a coding journey. Passionate about technology and
+                  servant leadership, I am committed to using my skills to serve
+                  and innovate.
                   <br />
                   <br />
-                  Passionate about technology and servant leadership, I am
-                  committed to using my skills to serve and innovate.
-                  <br />
-                  <br />
-                  With a keen attention to detail and a ScrumMaster(CSM)
+                  With a keen attention to detail and a ScrumMaster (CSM)
                   certification, I strive for excellence in every project. I aim
                   to deliver solutions that meet high quality and user
                   experience standards. My dedication to making a positive
