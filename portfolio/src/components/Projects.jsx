@@ -18,6 +18,7 @@ import img12 from "../img_productivity/img2.png";
 import img13 from "../img_productivity/img3.png";
 import img14 from "../img_productivity/img4.png";
 import img15 from "../img_productivity/img5.png";
+import img16 from "../img_productivity/img6.png";
 
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import {
@@ -62,14 +63,59 @@ function Projects() {
 
   const projects = [
     {
-      title: "TimeHack (Coming Soon)",
+      title: "TimeHack",
       description:
-        "( Full Stack ) A productivity app that helps users track their time and tasks. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient time management. There is a daily todo section and foudational habits that resets at midnight. A project/class section to keep track of upcoming tasks and where they are along the process. Other features coming soon.",
+        "(Full Stack) A productivity app that helps users track their time and tasks. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient time management. Key features include:",
+      features: [
+        {
+          name: "Random Bible Verse",
+          details: "Get a daily dose of inspiration with a random Bible verse.",
+        },
+        {
+          name: "Foundational Habits",
+          details:
+            "Resets at midnight, allowing you to check off what you want to accomplish daily.",
+        },
+        {
+          name: "Daily To-Do",
+          details:
+            "Resets each day, providing a fresh start for your daily tasks.",
+        },
+        {
+          name: "Projects",
+          details:
+            "Manage your projects with descriptions, quick notes, task managers including priorities, and progress tracking.",
+        },
+        {
+          name: "Backlog",
+          details: "A list of tasks that you can do when you have time.",
+        },
+        {
+          name: "Journal",
+          details: "Track your daily thoughts and reflections.",
+        },
+        {
+          name: "Food Logbook",
+          details: "Log your daily food intake.",
+        },
+        {
+          name: "Focus Timer",
+          details: "Use a timer to focus on tasks.",
+        },
+        {
+          name: "Fitness Tracker",
+          details: "Coming soon! Track your fitness activities.",
+        },
+        {
+          name: "Budget Tracker",
+          details: "Coming soon! Track your expenses and budget.",
+        },
+      ],
       imageUrl: "./productivity.webp",
-      link: "",
-      linkType: "",
-      demo: "",
-      images: [img13, img15, img12, img11, img14],
+      link: "https://github.com/dans2177/ProducitivyPlanner-Frontend",
+      linkType: "github",
+      demo: "https://www.habitlogbook.com/",
+      images: [img12, img11, img13, img15, img14, img16],
       techStack: "MongoDB, Express.js, React, Redux, Auth0, Node.js",
     },
     {
@@ -86,7 +132,7 @@ function Projects() {
     {
       title: "Family Cookbook",
       description:
-        "( Frontend: Vite + TailwindCSS ) A  digital repository for my family to share and cherish generations of recipes.  Keeping our culinary heritage at our fingertips.",
+        "( Frontend: Vite + TailwindCSS ) A digital repository for my family to share and cherish generations of recipes. Keeping our culinary heritage at our fingertips.",
       imageUrl: "./Shemon_Cookbook.png",
       link: "https://github.com/dans2177/Shemon-Cookbook",
       linkType: "github",

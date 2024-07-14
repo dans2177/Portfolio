@@ -64,6 +64,19 @@ function Resume() {
 
   const professionalExperience = [
     {
+      role: "Technical Support Specialist (Tier 2) ",
+      company: "Sked",
+      period: "Current",
+      tasks: [
+        "Advanced to Tier 2 support immediately due to demonstrated technical proficiency and strong background.",
+        "Developed and implemented internal tools to streamline company operations and enhance productivity.",
+        "Collaborated with development team to identify and resolve software issues, contributing to overall product quality and user satisfaction.",
+        "Performed database queries and reported errors to improve data integrity and application performance.",
+        "Conducted API testing using Postman to ensure optimal performance and reliability of office servers.",
+        "Managed and resolved complex office and customer support tickets.",
+      ],
+    },
+    {
       role: "AI Workshop Instructor",
       company: "Independent",
       period: "September 2023",
@@ -96,17 +109,18 @@ function Resume() {
         "Worked closely with team members to streamline data entry processes and improve efficiency.",
       ],
     },
-    {
-      role: "Team Member",
-      company: "GreatLIFE Golf and Fitness",
-      period: "December 2019 - July 2021",
-      tasks: [
-        "Served as the primary point of contact for members and guests, ensuring a smooth check-in and check-out process.",
-        "Handled membership sign-ups and liaised with insurance companies to verify coverage for new members.",
-        "Effectively resolved customer complaints to maintain a positive environment.",
-        "Ensured the facility was clean and compliant with CDC standards.",
-      ],
-    },
+
+    // {
+    //   role: "Team Member",
+    //   company: "GreatLIFE Golf and Fitness",
+    //   period: "December 2019 - July 2021",
+    //   tasks: [
+    //     "Served as the primary point of contact for members and guests, ensuring a smooth check-in and check-out process.",
+    //     "Handled membership sign-ups and liaised with insurance companies to verify coverage for new members.",
+    //     "Effectively resolved customer complaints to maintain a positive environment.",
+    //     "Ensured the facility was clean and compliant with CDC standards.",
+    //   ],
+    // },
   ];
 
   return (

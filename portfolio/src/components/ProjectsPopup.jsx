@@ -24,7 +24,6 @@ function ProjectPopup({ project, closeModal }) {
             <FaTimes />
           </button>
         </div>
-        {/* Adjusted grid layout */}
         <div className="grid grid-cols-1 gap-4">
           <div className="slide-container">
             <Slide {...properties}>
@@ -43,24 +42,49 @@ function ProjectPopup({ project, closeModal }) {
             <h3 className="text-xl font-bold mb-2 font-comfortaa dark:text-white">
               {project.title}
             </h3>
-            <p className="mb-4 font-comfortaa dark:text-white">{project.description}</p>
+            <p className="mb-4 font-comfortaa dark:text-white">
+              {project.description}
+            </p>
+            {project.features && (
+              <>
+                <h4 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                  Key Features:
+                </h4>
+                <ul className="list-none mb-4 text-gray-800 dark:text-gray-300 space-y-4">
+                  {project.features.map((feature, index) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <div>
+                        <strong className="text-blue-600 dark:text-blue-400">
+                          {feature.name}:
+                        </strong>
+                        <span className="ml-1">{feature.details}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              {project.demo && <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
-              >
-                <FaPlay className="mr-2" size={22} /> Demo
-              </a>}
-         { project.link &&    <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-orange-600 text-white py-2 px-4 rounded hover:bg-orange-900 transition"
-              >
-                <FaGithub className="mr-2" size={28} /> GitHub
-              </a>}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
+                >
+                  <FaPlay className="mr-2" size={22} /> Demo
+                </a>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center bg-orange-600 text-white py-2 px-4 rounded hover:bg-orange-900 transition"
+                >
+                  <FaGithub className="mr-2" size={28} /> GitHub
+                </a>
+              )}
             </div>
           </div>
         </div>
