@@ -63,19 +63,19 @@ function Resume() {
   ];
 
   const professionalExperience = [
-    {
-      role: "Technical Support Specialist (Tier 2) ",
-      company: "Sked",
-      period: "Current",
-      tasks: [
-        "Advanced to Tier 2 support immediately due to demonstrated technical proficiency and strong background.",
-        "Developed and implemented internal tools to streamline company operations and enhance productivity.",
-        "Collaborated with development team to identify and resolve software issues, contributing to overall product quality and user satisfaction.",
-        "Performed database queries and reported errors to improve data integrity and application performance.",
-        "Conducted API testing using Postman to ensure optimal performance and reliability of office servers.",
-        "Managed and resolved complex office and customer support tickets.",
-      ],
-    },
+    // {
+    //   role: "Technical Support Specialist (Tier 2) ",
+    //   company: "Sked",
+    //   period: "Current",
+    //   tasks: [
+    //     "Advanced to Tier 2 support immediately due to demonstrated technical proficiency and strong background.",
+    //     "Developed and implemented internal tools to streamline company operations and enhance productivity.",
+    //     "Collaborated with development team to identify and resolve software issues, contributing to overall product quality and user satisfaction.",
+    //     "Performed database queries and reported errors to improve data integrity and application performance.",
+    //     "Conducted API testing using Postman to ensure optimal performance and reliability of office servers.",
+    //     "Managed and resolved complex office and customer support tickets.",
+    //   ],
+    // },
     {
       role: "AI Workshop Instructor",
       company: "Independent",
