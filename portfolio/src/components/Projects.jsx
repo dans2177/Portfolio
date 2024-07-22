@@ -63,7 +63,7 @@ function Projects() {
 
   const projects = [
     {
-      title: "TimeHack",
+      title: "Habit Logbook",
       description:
         "(Full Stack) A productivity app that helps users track their time and tasks. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient time management. Key features include:",
       features: [
