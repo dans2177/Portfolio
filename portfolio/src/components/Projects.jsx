@@ -68,8 +68,9 @@ function Projects() {
         "(Full Stack) A productivity app that helps users track their time and tasks. It leverages MongoDB, Express.js, React, Redux, Auth0, and Node.js to ensure a responsive and intuitive user experience for efficient time management. Key features include:",
       features: [
         {
-          name: "Random Bible Verse",
-          details: "Get a daily dose of inspiration with a random Bible verse.",
+          name: "Inspirational Quotes",
+          details:
+            "Get a daily dose of inspiration with a random stoic quote or Bible verse.",
         },
         {
           name: "Foundational Habits",
