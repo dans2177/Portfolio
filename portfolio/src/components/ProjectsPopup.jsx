@@ -16,14 +16,15 @@ function ProjectPopup({ project, closeModal }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
       <div className="max-w-4xl w-full m-4">
-        <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-lg max-h-screen overflow-y-auto">
+        <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-lg max-h-[85vh] overflow-y-auto">
           <div className="flex justify-end">
+            {" "}
             <button
               onClick={closeModal}
-              className="text-xl mb-4 p-1 hover:bg-gray-400 dark:bg-red-100 dark:hover:bg-red-500 rounded-full text-red-500 dark:hover:text-red-800"
+              className="text-xl m-2  p-1 bg-gray-200  hover:bg-gray-400 self-end dark:bg-red-100 dark:hover:bg-red-500 rounded-full text-red-500 dark:hover:text-red-800"
             >
               <FaTimes />
-            </button>
+            </button>{" "}
           </div>
           <div className="grid grid-cols-1 gap-4 p-4">
             <div className="slide-container">
