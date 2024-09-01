@@ -78,6 +78,7 @@ function Projects() {
         "A web application that serves as a landing page and map to help users find office locations for a company. It provides an intuitive interface where users can search for offices by ZIP code and view detailed information about each location.",
       imageUrl: "./Provider_Map.webp",
       link: "https://github.com/dans2177/Map",
+      demo: "https://map-seven-phi.vercel.app/",
       linkType: "website",
       images: [img17, img18, img19, img20, img21],
       techStack: ["React", "TailwindCSS", "Mapbox API"],
