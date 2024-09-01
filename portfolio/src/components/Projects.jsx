@@ -20,6 +20,12 @@ import img14 from "../img_productivity/img4.png";
 import img15 from "../img_productivity/img5.png";
 import img16 from "../img_productivity/img6.png";
 
+import img17 from "../img_map/pi1.png";
+import img18 from "../img_map/pi2.png";
+import img19 from "../img_map/pi3.png";
+import img20 from "../img_map/pi4.png";
+import img21 from "../img_map/pi5.png";
+
 import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import {
   SiRedux,
@@ -28,6 +34,8 @@ import {
   SiAuth0,
   SiExpress,
 } from "react-icons/si";
+
+import { AiTwotoneApi } from "react-icons/ai";
 
 function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -49,6 +57,8 @@ function Projects() {
         return <SiTailwindcss size={28} className="text-teal-400" />;
       case "Auth0":
         return <SiAuth0 size={28} className="text-orange-500" />;
+      case "Mapbox API":
+        return <AiTwotoneApi size={28} className="text-blue-500" />;
       case "Express.js":
         return (
           <SiExpress
@@ -62,6 +72,16 @@ function Projects() {
   };
 
   const projects = [
+    {
+      title: "Provider Map",
+      description:
+        "A web application that serves as a landing page and map to help users find office locations for a company. It provides an intuitive interface where users can search for offices by ZIP code and view detailed information about each location.",
+      imageUrl: "./Provider_Map.webp",
+      link: "https://github.com/dans2177/Map",
+      linkType: "website",
+      images: [img17, img18, img19, img20, img21],
+      techStack: ["React", "TailwindCSS", "Mapbox API"],
+    },
     {
       title: "Habit Logbook",
       description:
@@ -117,7 +137,14 @@ function Projects() {
       linkType: "github",
       demo: "https://www.habitlogbook.com/",
       images: [img12, img11, img13, img15, img14, img16],
-      techStack: "MongoDB, Express.js, React, Redux, Auth0, Node.js",
+      techStack: [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Redux",
+        "Auth0",
+        "Node.js",
+      ],
     },
     {
       title: "Filament Tracker",
@@ -128,18 +155,25 @@ function Projects() {
       linkType: "github",
       demo: "https://www.3dlogbook.com/",
       images: [img1, img2, img3, img4, img5, img6],
-      techStack: "MongoDB, Express.js, React, Redux, Auth0, Node.js",
+      techStack: [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Redux",
+        "Auth0",
+        "Node.js",
+      ],
     },
     {
       title: "Family Cookbook",
       description:
         "( Frontend: Vite + TailwindCSS ) A digital repository for my family to share and cherish generations of recipes. Keeping our culinary heritage at our fingertips.",
-      imageUrl: "./Shemon_Cookbook.png",
+      imageUrl: "./Shemon_Cookbook.webp",
       link: "https://github.com/dans2177/Shemon-Cookbook",
       linkType: "github",
       demo: "https://www.shemoncookbook.com/",
       images: [img7, img8, img9, img10],
-      techStack: "Vite, TailwindCSS",
+      techStack: ["Vite", "TailwindCSS"],
     },
   ];
 
@@ -149,11 +183,11 @@ function Projects() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 pt-20 sm:justify-center sm:align-middle">
+    <div className="max-w-7xl mx-auto p-4 pt-20 sm:justify-center item sm:align-middle ">
       <h2 className="text-4xl md:pl-4 md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
         Projects
       </h2>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -179,7 +213,7 @@ function Projects() {
                 <div className="flex flex-col justify-start h-full pt-4 pb-2">
                   <div className="flex flex-wrap gap-3 justify-center">
                     {/* Internal flex container for tech stack */}
-                    {project.techStack.split(", ").map((tech, idx) => (
+                    {project.techStack.map((tech, idx) => (
                       <div key={idx} className="flex justify-center items-left">
                         <div className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg">
                           <div className="w-8 h-8 flex justify-center items-center">
@@ -207,4 +241,5 @@ function Projects() {
     </div>
   );
 }
+
 export default Projects;

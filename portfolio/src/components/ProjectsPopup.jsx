@@ -14,9 +14,9 @@ function ProjectPopup({ project, closeModal }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center ">
       <div className="max-w-4xl w-full m-4">
-        <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-lg max-h-[85vh] overflow-y-auto">
+        <div className="bg-white dark:bg-gray-800 p-5 rounded-lg max-h-[85vh] overflow-y-auto shadow-inner-xl">
           <div className="flex justify-end">
             {" "}
             <button
