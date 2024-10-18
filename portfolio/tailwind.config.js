@@ -4,6 +4,17 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      extend: {
+        keyframes: {
+          blink: {
+            "0%, 50%": { opacity: 1 },
+            "50.01%, 100%": { opacity: 0 },
+          },
+        },
+        animation: {
+          blink: "blink 1s step-start infinite",
+        },
+      },
       fontFamily: {
         agbalumo: ["Agbalumo", "cursive"],
         comfortaa: ["Comfortaa", "cursive"],

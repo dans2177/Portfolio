@@ -36,10 +36,48 @@ import {
 } from "react-icons/si";
 
 import { AiTwotoneApi } from "react-icons/ai";
+import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+
+import { motion, AnimatePresence } from "framer-motion";
 
 function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  // Animation controls for the Projects section
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  // Define animation variants for the Projects container
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  // Define animation variants for each project card
+  const projectVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   const getTechIcon = (tech) => {
     switch (tech) {
@@ -190,40 +228,67 @@ function Projects() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-4 pt-20 sm:justify-center item sm:align-middle ">
-      <h2 className="text-4xl md:pl-4 md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left">
+    <div className="max-w-7xl mx-auto p-4 pt-20 sm:justify-center items-center sm:align-middle ">
+      {/* Animated Projects Heading */}
+      <motion.h2
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
+        className="text-4xl md:pl-4 md:text-6xl pb-8 font-prata text-gray-900 dark:text-gray-200 text-center sm:text-left"
+      >
         Projects
-      </h2>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+      </motion.h2>
+
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="group flex flex-col  rounded-lg bg-white shadow-lg dark:bg-gray-900 transform hover:scale-95 transition duration-300"
+            className="group flex flex-col rounded-lg bg-white shadow-lg dark:bg-gray-900"
+            variants={projectVariants}
+            whileHover={{ scale: 1.05 }} // Smooth hover scaling with Framer Motion
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <button
               onClick={() => openModal(project)}
-              className="relative flex flex-col h-full text-left" // Styled like a link
+              className="relative flex flex-col h-full text-left w-full"
             >
-              <img
+              <motion.img
                 src={project.imageUrl}
                 alt={`Project ${project.title}`}
-                className="object-cover w-full h-48 md:h-full rounded-t-lg"
+                className="object-cover w-full h-48 md:h-48 rounded-t-lg"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               />
-              <div className="absolute inset-0 bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                {/* Ensure the icon is only visible on hover */}
+              <motion.div
+                className="absolute inset-0 bg-black rounded-lg bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Icon only visible on hover */}
                 <FaRegWindowMaximize className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              </motion.div>
               <div className="p-4 flex flex-col justify-between h-full w-full">
-                <h3 className="text-xl pb-4 text-bold text-center font-semibold font-comfortaa dark:text-amber-400 mt-4">
+                <h3 className="text-xl pb-4 text-center font-semibold font-comfortaa dark:text-amber-400 mt-4">
                   {project.title}
                 </h3>
                 <div className="flex flex-col justify-start h-full pt-4 pb-2">
                   <div className="flex flex-wrap gap-3 justify-center">
-                    {/* Internal flex container for tech stack */}
+                    {/* Tech Stack Icons */}
                     {project.techStack.map((tech, idx) => (
-                      <div key={idx} className="flex justify-center items-left">
+                      <div
+                        key={idx}
+                        className="flex justify-center items-center"
+                      >
                         <div className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg">
-                          <div className="w-8 h-8 flex justify-center items-center">
+                          <div className="w-6 h-6 flex justify-center items-center">
                             {getTechIcon(tech.trim())}
                           </div>
                           <span className="text-xs md:text-sm dark:text-gray-200">
@@ -236,15 +301,19 @@ function Projects() {
                 </div>
               </div>
             </button>
-          </div>
+          </motion.div>
         ))}
-      </div>
-      {modalOpen && (
-        <ProjectsPopup
-          project={selectedProject}
-          closeModal={() => setModalOpen(false)}
-        />
-      )}
+      </motion.div>
+
+      {/* Modal Popup with AnimatePresence for smooth entry and exit */}
+      <AnimatePresence>
+        {modalOpen && selectedProject && (
+          <ProjectsPopup
+            project={selectedProject}
+            closeModal={() => setModalOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
