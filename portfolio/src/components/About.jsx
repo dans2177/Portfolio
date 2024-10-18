@@ -33,7 +33,8 @@ function About() {
 
   // Animation controls for different sections
   const headingControls = useAnimation();
-  const imageControls = useAnimation();
+  const image1Controls = useAnimation();
+  const image2Controls = useAnimation();
   const textControls = useAnimation();
   const timelineControls = useAnimation();
 
@@ -42,7 +43,11 @@ function About() {
     triggerOnce: true,
     threshold: 0.2,
   });
-  const [imageRef, imageInView] = useInView({
+  const [image1Ref, image1InView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [image2Ref, image2InView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
@@ -60,8 +65,11 @@ function About() {
     if (headingInView) {
       headingControls.start("visible");
     }
-    if (imageInView) {
-      imageControls.start("visible");
+    if (image1InView) {
+      image1Controls.start("visible");
+    }
+    if (image2InView) {
+      image2Controls.start("visible");
     }
     if (textInView) {
       textControls.start("visible");
@@ -72,8 +80,10 @@ function About() {
   }, [
     headingInView,
     headingControls,
-    imageInView,
-    imageControls,
+    image1InView,
+    image1Controls,
+    image2InView,
+    image2Controls,
     textInView,
     textControls,
     timelineInView,
@@ -144,12 +154,12 @@ function About() {
       <div className="max-w-4xl mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900 p-6 rounded-lg dark:shadow-xl">
         <section className="m-4">
           <div className="flex flex-col sm:flex-row items-center border-b-2 pb-4 border-orange-500">
-            {/* Animated Image */}
+            {/* Animated Image and Text */}
             <motion.div
-              ref={imageRef}
+              ref={image1Ref}
               variants={imageVariants}
               initial="hidden"
-              animate={imageControls}
+              animate={image1InView ? "visible" : "hidden"}
               className="sm:w-1/2"
             >
               {/* Image below the title on small screens */}
@@ -166,7 +176,7 @@ function About() {
                   ref={textRef}
                   variants={textVariants}
                   initial="hidden"
-                  animate={textControls}
+                  animate={textInView ? "visible" : "hidden"}
                   className="text-lg pb-4 font-comfortaa text-gray-900 dark:text-white"
                 >
                   I'm a driven Software Developer pursuing a Bachelor’s Degree
@@ -192,10 +202,10 @@ function About() {
 
             {/* Image on the right for large screens */}
             <motion.div
-              ref={imageRef}
+              ref={image2Ref}
               variants={imageVariants}
               initial="hidden"
-              animate={imageControls}
+              animate={image2InView ? "visible" : "hidden"}
               className="hidden sm:block sm:w-1/2 sm:pl-8"
             >
               <img
