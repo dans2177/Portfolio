@@ -112,13 +112,13 @@ function Skills() {
 
 
   return (
-    <div className="container mt-10 mx-auto  max-w-6xl">
+    <div className="px-4 sm:mx-auto container mt-10   max-w-6xl">
       <h2 className="text-4xl pb-4 md:text-6xl sm:pl-4 font-prata text-gray-900 dark:text-gray-100 text-center sm:text-left">
         Skills
       </h2>
       <div className="max-w-5xl py-4 mx-auto sm:justify-center sm:align-middle bg-gray-100 dark:bg-gray-900  px-6 rounded-lg dark:shadow-xl">
         <motion.div
-          className="m-4"
+          className=""
           variants={containerVariants}
           initial="hidden"
           animate={controls}
