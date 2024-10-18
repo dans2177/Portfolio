@@ -3,40 +3,48 @@ import React from "react";
 function Resume() {
   const education = [
     {
-      institution: "Grand Canyon University ",
-      degree: "Bachelor's Degree in Business Administration (3.5 gpa)",
-      year: "2021-2024 (Expected)",
+      institution: "Grand Canyon University",
+      degree: "Bachelor's Degree in Business Management",
+      gpa: "3.5 GPA",
+      year: "August 2021 - December 2024 (Expected)",
       details:
-        "Active involvement in recreational sports and community service groups on campus. Also was involved in GCU's Idea Club where people bring their ideas in a Shark Tank style competition. Graduating a semester early.",
+        "Participated in Intramural Sports and Local Outreach. Graduating a semester early.",
     },
     {
-      institution: "Sioux Falls Christian ",
-      degree: "High School Diploma (3.8 gpa)",
-      year: "2017 – 2021",
+      institution: "Sioux Falls Christian",
+      degree: "High School Diploma",
+      gpa: "3.8 GPA",
+      year: "August 2017 - December 2020",
       details:
-        "Graduated with High Honors Roll, participated in sports and debate, and mentored elementary students.",
+        "Participated in Debate, Football, Track, Mentorship, and Community Outreach. Graduated with High Honors Roll.",
     },
   ];
 
   const certifications = [
     {
-      title: "Full-Stack Engineer Career Path",
+      title: "Full Stack Software Engineering Certification",
       issuer: "Codecademy",
-      date: "Jun 2023",
+      dateRange: "November 2022 - June 2023",
     },
     {
       title: "Certified ScrumMaster® (CSM®)",
       issuer: "Scrum Alliance",
-      date: "Jun 2023",
-      validUntil: "Jun 2025",
+      date: "June 2023",
+      validUntil: "June 2025",
       credentialID: "1794821",
     },
   ];
 
   const volunteer = [
     {
-      role: "Audio Visual Technician ",
-      duration: "Jul 2017-22",
+      role: "City Hope",
+      duration: "March 2023 - ...",
+      details:
+        "Shopped with locals at a food bank sponsered by Christ Church that is set up as a grocery store so we can connect with individuals as they walk through.",
+    },
+    {
+      role: "Audio Visual Technician",
+      duration: "July 2017 - 2022",
       details:
         "Managed sound and visual systems during Sunday worship services at Abiding Savior Lutheran Church.",
     },
@@ -48,7 +56,7 @@ function Resume() {
     {
       role: "The Banquet",
       details:
-        "Serving and preparing meals for homeless and low-income families, and provided a listening ear.",
+        "Served and prepared meals for homeless and low-income families, and provided a listening ear.",
     },
     {
       role: "Operation Christmas Child",
@@ -64,16 +72,16 @@ function Resume() {
 
   const professionalExperience = [
     {
-      role: "Technical Support Specialist (Tier 2) ",
-      company: "Sked",
+      role: "Technical Support Specialist (Tier 2)",
+      company: "SKED Software",
       period: "April 2024 - Current",
       tasks: [
-        "Advanced to Tier 2 support immediately due to demonstrated technical proficiency and strong background.",
-        "Developed and implemented internal tools to streamline company operations and enhance productivity.",
-        "Collaborated with the development team to identify and resolve software issues, contributing to overall product quality and user satisfaction.",
-        "Performed database queries and reported errors to improve data integrity and application performance.",
-        "Conducted API testing using Postman to ensure optimal performance and reliability of office servers.",
-        "Managed and resolved complex office and customer support tickets.",
+        "Promoted to Tier 2 Support swiftly by demonstrating advanced technical skills and a strong development background.",
+        "Designed and developed internal applications using JavaScript frameworks to streamline company operations, enhancing productivity and saving hundreds of hours.",
+        "Collaborated with the development team to identify, debug, and resolve software issues, thereby improving overall product quality and user satisfaction.",
+        "Executed complex database queries and identified data discrepancies to enhance data integrity and optimize application performance.",
+        "Developed and tested APIs with Postman to ensure the reliability and efficiency of office server integrations.",
+        "Managed and resolved intricate technical support tickets, providing solutions that supported both office operations and customer needs.",
       ],
     },
     {
@@ -81,21 +89,19 @@ function Resume() {
       company: "Independent",
       period: "September 2023",
       tasks: [
-        "Developed and delivered a comprehensive curriculum to over 100 business professionals, covering the basics and applications of ChatGPT and AI in business.",
-        "Provided practical, hands-on training sessions to enhance participants' understanding and skills in using ChatGPT and AI tools.",
-        "Ensured each participant's understanding through one-on-one mentoring upon request, tailoring the guidance to meet diverse learning needs.",
+        "Collaborated with Primerica’s regional president to design and deliver a comprehensive AI curriculum for over 100 financial professionals, effectively simplifying complex concepts through practical software applications.",
+        "Led individual and group hands-on training sessions and provided personalized mentoring to enhance participants’ proficiency with AI tools, ensuring diverse learning needs were met and fostering a deep understanding of AI integration in financial services.",
       ],
-      // Add more professional experiences as needed
     },
     {
       role: "Business Operations Intern",
       company: "Highest Health Chiropractic",
-      period: "April - August 2023",
+      period: "April - November 2023",
       tasks: [
-        "Assisted in ech setup during office relocation: Coordinated with the company to move to a new location, ensuring all tech equipment was set up for a seamless transition.",
-        "Going paperless: Created a plan to switch to digital forms for all office paperwork.",
-        "Data management: Responsible for data entry tasks, ensuring high levels of accuracy across all systems.",
-        "Customer interaction: Actively engaged with customers to provide professional service and address any concerns.",
+        "Coordinated the company's relocation by managing tech setup.",
+        "Head of project for the transition to digital forms, significantly reducing paperwork.",
+        "Managed data entry tasks with precision, ensuring accuracy across all systems.",
+        "Delivered exceptional customer service, addressing concerns and enhancing satisfaction.",
       ],
     },
     {
@@ -109,7 +115,7 @@ function Resume() {
         "Worked closely with team members to streamline data entry processes and improve efficiency.",
       ],
     },
-
+    // Uncomment and update if needed
     // {
     //   role: "Team Member",
     //   company: "GreatLIFE Golf and Fitness",
