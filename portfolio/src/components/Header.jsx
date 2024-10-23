@@ -50,16 +50,19 @@ function Header() {
             Hello World! My name is
           </motion.h1>
           <motion.h1
-            className="font-bold text-left font-pixelify text-6xl md:text-8xl lg:text-9xl flex items-center"
+            className="font-bold text-left font-pixelify text-6xl md:text-8xl lg:text-9xl items-center flex"
             variants={subHeadingVariants}
           >
-            Daniel Shemon<span className="animate-blink">_</span>
+            <span className="flex-1">
+              <span className="whitespace-pre-wrap">Daniel Shemon</span>
+              <span className="animate-blink">_</span>
+            </span>
           </motion.h1>
         </motion.div>
 
         {/* Paragraph */}
         <motion.p
-          className="text-left text-black dark:text-white mt-8 md:mt-16 p-4 md:pl-10 md:text-2xl xl:text-4xl font-prata leading-normal sm:leading-relaxed"
+          className="text-left text-black dark:text-white mt-8 md:mt-16 md:p-4 md:pl-10 md:text-2xl xl:text-4xl font-prata leading-normal sm:leading-relaxed"
           variants={paragraphVariants}
         >
           Full Stack Web Developer <br />

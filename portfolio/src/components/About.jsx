@@ -167,7 +167,8 @@ function About() {
                 <img
                   src="/Handsome.jpg"
                   alt="About Me"
-                  className="rounded-full w-80 h-80 mb-4 mx-auto object-cover shadow-lg transform transition-transform duration-500 hover:scale-105"
+                  className="rounded-full w-80 h-80 mb-4 mx-auto object-cover transform transition-transform duration-500 hover:scale-105"
+                  style={{ boxShadow: "none" }} // Ensure no shadow
                 />
               </div>
               <div className="dark:bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg">
@@ -211,7 +212,8 @@ function About() {
               <img
                 src="/Handsome.jpg"
                 alt="About Me"
-                className="rounded-full w-80 h-80 mb-4 sm:mt-4 md:ml-10 mx-32 sm:mx-0 object-cover shadow-lg transform transition-transform duration-500 hover:scale-105"
+                className="rounded-full w-80 h-80 mb-4 sm:mt-4 md:ml-10 mx-32 sm:mx-0 object-cover transform transition-transform duration-500 hover:scale-105"
+                style={{ boxShadow: "none" }} // Ensure no shadow
               />
             </motion.div>
           </div>
@@ -263,7 +265,8 @@ function About() {
                       <img
                         src={section.imgSrc}
                         alt={section.title}
-                        className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last object-cover shadow-lg transform transition-transform duration-500 hover:scale-105"
+                        className="rounded-full w-48 h-48 mb-4 md:mb-0 md:ml-4 md:w-64 md:h-64 md:order-last object-cover transform transition-transform duration-500 hover:scale-105"
+                        style={{ boxShadow: "none" }} // Ensure no shadow
                       />
 
                       <div className="flex flex-col justify-between flex-grow max-w-3xl md:order-first">
