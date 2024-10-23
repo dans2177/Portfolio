@@ -1,18 +1,12 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaPlay, FaGithub, FaTimes } from "react-icons/fa";
-import "react-slideshow-image/dist/styles.css";
+import "swiper/css"; // Import basic Swiper styles
+import "swiper/css/navigation"; // Import Navigation module styles
+import "swiper/css/pagination"; // Import Pagination module styles
 
 function ProjectPopup({ project, closeModal }) {
-  const properties = {
-    duration: 5000,
-    transitionDuration: 500,
-    infinite: true,
-    indicators: true,
-    arrows: true,
-    pauseOnHover: true,
-  };
-
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
       <div className="max-w-4xl w-full m-4">
@@ -26,19 +20,26 @@ function ProjectPopup({ project, closeModal }) {
             </button>
           </div>
           <div className="grid grid-cols-1 gap-4 p-4">
-            <div className="slide-container">
-              <Slide {...properties}>
+            <div className="swiper-container">
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={30}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000 }}
+                loop={true}
+              >
                 {project.images.map((each, index) => (
-                  <div key={index} className="each-slide">
+                  <SwiperSlide key={index}>
                     <img
                       src={each}
                       alt={`Slide ${index}`}
                       className="w-full h-auto rounded-2xl"
                       loading="lazy" // Lazy loading applied here
                     />
-                  </div>
+                  </SwiperSlide>
                 ))}
-              </Slide>
+              </Swiper>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 font-comfortaa dark:text-white">
