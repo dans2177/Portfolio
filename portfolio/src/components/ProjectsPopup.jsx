@@ -7,9 +7,21 @@ import "swiper/css/navigation"; // Import Navigation module styles
 import "swiper/css/pagination"; // Import Pagination module styles
 
 function ProjectPopup({ project, closeModal }) {
+  const handleClickOutside = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-      <div className="max-w-4xl w-full m-4">
+    <div
+      onClick={handleClickOutside}
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+    >
+      <div
+        className="max-w-4xl w-full m-4"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+      >
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg max-h-[85vh] overflow-y-auto shadow-inner-xl">
           <div className="flex justify-end">
             <button

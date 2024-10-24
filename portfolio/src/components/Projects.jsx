@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegWindowMaximize } from "react-icons/fa";
-import { useState } from "react";
 import ProjectsPopup from "./ProjectsPopup";
 import img1 from "../img_3d_logbook/pi1.png";
 import img2 from "../img_3d_logbook/pi2.png";
@@ -36,16 +35,14 @@ import {
 } from "react-icons/si";
 
 import { AiTwotoneApi } from "react-icons/ai";
-import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-
 import { motion, AnimatePresence } from "framer-motion";
 
 function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
   // Animation controls for the Projects section
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -58,6 +55,20 @@ function Projects() {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  // Disable scrolling when the modal is open
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to ensure scroll is re-enabled when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalOpen]);
 
   // Define animation variants for the Projects container
   const containerVariants = {
