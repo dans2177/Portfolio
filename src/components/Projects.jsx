@@ -25,13 +25,18 @@ import img19 from "../img_map/pi3.png";
 import img20 from "../img_map/pi4.png";
 import img21 from "../img_map/pi5.png";
 
-import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import img22 from "../img_workout/1.png";
+import img23 from "../img_workout/2.png";
+import img24 from "../img_workout/3.png";
+
+import { FaReact, FaNodeJs, FaDatabase, FaLock } from "react-icons/fa";
 import {
   SiRedux,
   SiVite,
   SiTailwindcss,
   SiAuth0,
   SiExpress,
+  SiFirebase,
 } from "react-icons/si";
 
 import { AiTwotoneApi } from "react-icons/ai";
@@ -108,6 +113,23 @@ function Projects() {
         return <SiAuth0 size={28} className="text-orange-500" />;
       case "Mapbox API":
         return <AiTwotoneApi size={28} className="text-blue-500" />;
+      case "Firebase":
+        return (
+          <SiFirebase
+            size={28}
+            className="text-yellow-500 dark:text-yellow-200"
+          />
+        );
+      case "Firebase Auth":
+        return (
+          <FaLock size={24} className="text-yellow-500 dark:text-yellow-200" />
+        );
+
+      case "React Native":
+        return (
+          <FaReact size={28} className="text-blue-500 dark:text-blue-300" />
+        );
+
       case "Express.js":
         return (
           <SiExpress
@@ -121,6 +143,44 @@ function Projects() {
   };
 
   const projects = [
+    {
+      title: "Workout App",
+      description:
+        "A mobile application designed to help users track and manage their fitness journey. Built with React Native, Firebase, Tailwind CSS, and Firebase Authentication, the app features a sleek and responsive design, ensuring a seamless user experience across devices.",
+      features: [
+        {
+          name: "Workout Tracking",
+          details:
+            "Users can log workouts, track progress over time, and view historical data to monitor their fitness goals.",
+        },
+        {
+          name: "Local and Cloud Storage",
+          details:
+            "The app uses Firebase to store user data securely in the cloud while also utilizing local storage for offline access and smooth performance.",
+        },
+        {
+          name: "Firebase Authentication",
+          details:
+            "Secure user authentication with Firebase Auth ensures users' data is protected and accessible only to them.",
+        },
+        {
+          name: "Responsive UI with Tailwind CSS",
+          details:
+            "Tailwind CSS allows for rapid UI development with a clean and modern design, tailored for fitness enthusiasts.",
+        },
+        {
+          name: "Cross-Platform Compatibility",
+          details:
+            "Built with React Native, the app delivers a consistent user experience on both iOS and Android devices.",
+        },
+      ],
+      imageUrl: "./Workout.webp",
+      link: "https://github.com/dans2177/WorkoutApp",
+      linkType: "github",
+      demo: "https://www.myworkoutapp.com/", // Replace with the actual demo link if available
+      images: [img22, img23, img24],
+      techStack: ["React Native", "Firebase", "TailwindCSS", "Firebase Auth"],
+    },
     {
       title: "Provider Map",
       description:
@@ -252,7 +312,7 @@ function Projects() {
       </motion.h2>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
